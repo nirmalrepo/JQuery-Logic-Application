@@ -34,6 +34,10 @@ p.p-no {
     border-radius: 0px;
 }
 
+.btn-container {
+    margin-top: 2%;
+}
+
 #container .btn.btn-success {
     background: transparent;
     color: grey;
@@ -75,10 +79,55 @@ i.glyphicon-remove {
     top: 0%;
 }
 
-.conditions-section .btn.btn-primary.btn-sub-condtion{
+.conditions-section .btn.btn-primary.btn-sub-condtion {
     background-color: transparent;
-    border-color:transparent;
+    border-color: transparent;
     color: #2e6da4;
-    font-weight: bold; 
+    font-weight: bold;
     text-align: center;
+}
+
+#btn-create-rules {
+    color: #28a745;
+    background-color: transparent;
+    background-image: none;
+    border-color: #28a745;
+    border-radius: 0px;
+}
+
+#btn-create-rules:hover {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-outline-primary {
+    color: #007bff;
+    background-color: transparent;
+    background-image: none;
+    border-color: #007bff;
+    border-radius: 0px;
+}
+
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.action_container, add_more_actions_container {
+    margin-bottom: 2%;
+}
+
+.action_container button {
+    padding: 0px 12px;
+    margin-top: -2px;
+}
+
+.select_action {
+    margin-right: 2%;
+}
+
+.hidden{
+    display: none;
 }
