@@ -135,3 +135,23 @@ i.glyphicon-remove {
 .btn-clear-action {
     margin-left: 2%;
 }
+
+/* .conditions-section>.row-fluid {
+    overflow-x: hidden;
+    white-space: nowrap;
+} */
+
+.conditions-section>.row-fluid>.col-md-10 {
+    display: inline-block;
+    float: none;
+}
+
+#container {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.conditions-section {
+    width: 100%;
+    padding: 0px;
+}

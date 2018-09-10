@@ -15,12 +15,12 @@ jQuery(document).ready(function () {
     function createConditionalSection(elem_id, section_type, selector) {
         var html = '<div id="section_' + elem_id + '" class="';
         html += (section_type == 'main') ? ' sections"' : ' sub-sections"';
-        html += ' ><div id = "builder_' + elem_id + '" class= "condition builder col-md-10';
-        html += (section_type == 'main') ? ' col-md-6 col-md-offset-3"' : ' col-md-10 col-md-offset-1"';
+        html += ' ><div id = "builder_' + elem_id + '" class= "condition builder"';
+        // html += (section_type == 'main') ? ' col-md-12"' : ' col-md-12"';
         html += '></div >' +
-            '<div class="col-md-12 conditions-section" id=" conditions-section_' + elem_id + '">' +
+            '<div class="container conditions-section" id=" conditions-section_' + elem_id + '">' +
             '<div class="row-fluid">' +
-            '<div class="col-md-5 col-md-offset-1 yes-block">' +
+            '<div class="col-md-10 yes-block">' +
             '<p class="p-yes"><i class="glyphicon glyphicon-ok"></i> If True</p>' +
             '<div class="row-fluid"> <div class="col-md-5 col-md-offset-4 action_select"  id="action_select_yes_' + elem_id + '"><select class="select_action" id="btn-sub-yes-select-action_' + elem_id + '"> <option value="">select action</option> <option value="condition">Condition</option><option value="action">Action</option></select>' +
             '<button class="btn btn-outline-primary btn-sub-condtion" data-elem-id="' + elem_id + '" data-condition = "yes" id="btn-sub-yes-condition_' + elem_id + '">select</button>' +
@@ -32,7 +32,7 @@ jQuery(document).ready(function () {
             '</div></div>' +
             '<div class="row-fluid sub-yes" id="sub-yes_' + elem_id + '"></div>' +
             '</div>' +
-            '<div class="col-md-5 no-block">' +
+            '<div class="col-md-10 no-block">' +
             '<p class="p-no"><i class="glyphicon glyphicon-remove"></i> If False</p>' +
             '<div class="row-fluid"> <div class="col-md-5 col-md-offset-4 action_select"  id="action_select_no_' + elem_id + '"><select class="select_action" id="btn-sub-no-select-action_' + elem_id + '"> <option value="">select action</option> <option value="condition">Condition</option><option value="action">Action</option></select><button class="btn btn-outline-primary btn-sub-condtion" data-elem-id="' + elem_id + '" data-condition = "no" id="btn-sub-no-condition_' + elem_id + '">select</button>' +
             '</div>' +
@@ -218,7 +218,6 @@ jQuery(document).ready(function () {
             var sub_set_yes = [];
             var sub_rule_set_no = {};
             var sub_set_no = [];
-            var actions_yes = [];
 
             $(this).find('.yes-block .sub-sections').each(function () {
                 var sub_sectionId = $(this).attr('id');
