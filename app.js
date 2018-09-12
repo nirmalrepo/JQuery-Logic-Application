@@ -20,23 +20,23 @@ jQuery(document).ready(function () {
         html += '></div >' +
             '<div class="container conditions-section" id=" conditions-section_' + elem_id + '">' +
             '<div class="row-fluid">' +
-            '<div class="col-md-10 yes-block">' +
+            '<div class="yes-block">' +
             '<p class="p-yes"><i class="glyphicon glyphicon-ok"></i> If True</p>' +
-            '<div class="row-fluid"> <div class="col-md-5 col-md-offset-4 action_select"  id="action_select_yes_' + elem_id + '"><select class="select_action" id="btn-sub-yes-select-action_' + elem_id + '"> <option value="">select action</option> <option value="condition">Condition</option><option value="action">Action</option></select>' +
+            '<div class="row-fluid"> <div class="col-md-5 action_select"  id="action_select_yes_' + elem_id + '"><select class="select_action" id="btn-sub-yes-select-action_' + elem_id + '"> <option value="">select action</option> <option value="condition">Condition</option><option value="action">Action</option></select>' +
             '<button class="btn btn-outline-primary btn-sub-condtion" data-elem-id="' + elem_id + '" data-condition = "yes" id="btn-sub-yes-condition_' + elem_id + '">select</button>' +
             '</div>' +
-            '<div class="col-md-5 col-md-offset-4 add_more_actions_container hidden" id="add_more_actions_container_yes_' + elem_id + '">' +
+            '<div class="col-md-5  add_more_actions_container hidden" id="add_more_actions_container_yes_' + elem_id + '">' +
             '<button type="button" class="btn btn-xs btn-success btn-add-action" data-elem-id="' + elem_id + '" data-condition = "yes" id="btn-add-action_yes_' + elem_id + '" data-add="rule"><i class="glyphicon glyphicon-plus"></i> Add action</button>' +
             '<button type="button" class="btn btn-xs btn-success btn-clear-action" data-elem-id="' + elem_id + '" data-condition = "yes" id="btn-clear-action_yes_' + elem_id + '" data-add="rule"><i class="glyphicon glyphicon-plus"></i> Clear All</button>' +
             '<div style="clear:both"></div>' +
             '</div></div>' +
             '<div class="row-fluid sub-yes" id="sub-yes_' + elem_id + '"></div>' +
             '</div>' +
-            '<div class="col-md-10 no-block">' +
+            '<div class="no-block">' +
             '<p class="p-no"><i class="glyphicon glyphicon-remove"></i> If False</p>' +
-            '<div class="row-fluid"> <div class="col-md-5 col-md-offset-4 action_select"  id="action_select_no_' + elem_id + '"><select class="select_action" id="btn-sub-no-select-action_' + elem_id + '"> <option value="">select action</option> <option value="condition">Condition</option><option value="action">Action</option></select><button class="btn btn-outline-primary btn-sub-condtion" data-elem-id="' + elem_id + '" data-condition = "no" id="btn-sub-no-condition_' + elem_id + '">select</button>' +
+            '<div class="row-fluid"> <div class="col-md-5 action_select"  id="action_select_no_' + elem_id + '"><select class="select_action" id="btn-sub-no-select-action_' + elem_id + '"> <option value="">select action</option> <option value="condition">Condition</option><option value="action">Action</option></select><button class="btn btn-outline-primary btn-sub-condtion" data-elem-id="' + elem_id + '" data-condition = "no" id="btn-sub-no-condition_' + elem_id + '">select</button>' +
             '</div>' +
-            '<div class="col-md-5 col-md-offset-4 add_more_actions_container hidden" id="add_more_actions_container_no_' + elem_id + '">' +
+            '<div class="col-md-5 add_more_actions_container hidden" id="add_more_actions_container_no_' + elem_id + '">' +
             '<button type="button" class="btn btn-xs btn-success btn-add-action" data-elem-id="' + elem_id + '"  data-condition = "no" id="btn-add-action_no_' + elem_id + '" data-add="rule"><i class="glyphicon glyphicon-plus"></i> Add action</button>' +
             '<button type="button" class="btn btn-xs btn-success btn-clear-action"  data-elem-id="' + elem_id + '" data-condition = "no" id="btn-clear-action_no_' + elem_id + '"  data-add="rule">         <i class="glyphicon glyphicon-plus"></i> Clear All</button>' +
             '<div style="clear:both"></div>' +

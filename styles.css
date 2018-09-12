@@ -18,7 +18,7 @@ p.p-yes {
     padding-right: 0px;
     padding-left: 0px;
     border: 1px solid #ac2925;
-    margin-left: 1%;
+    margin-left: 2%;
 }
 
 p.p-no {
@@ -115,9 +115,9 @@ i.glyphicon-remove {
     border-color: #007bff;
 }
 
-.action_select, add_more_actions_container {
+/* .action_select, add_more_actions_container {
     margin-bottom: 2%;
-}
+} */
 
 .action_select button {
     padding: 0px 12px;
@@ -141,9 +141,10 @@ i.glyphicon-remove {
     white-space: nowrap;
 } */
 
-.conditions-section>.row-fluid>.col-md-10 {
+.conditions-section>.row-fluid div.yes-block, .conditions-section>.row-fluid div.no-block {
     display: inline-block;
     float: none;
+    width: auto;
 }
 
 #container {
@@ -154,4 +155,10 @@ i.glyphicon-remove {
 .conditions-section {
     width: 100%;
     padding: 0px;
+}
+
+.sub-yes, .sub-no {
+    margin-top: 10%;
+    margin-left: 30px;
+    margin-right: 30px;
 }
