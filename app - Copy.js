@@ -13,8 +13,8 @@ jQuery(document).ready(function () {
     };
 
     function createConditionalSection(elem_id, section_type, selector) {
-        var html = '<div id="section_' + elem_id + '" class="logics ';
-        html += (section_type == 'main') ? 'sections"' : ' sub-sections"';
+        var html = '<div id="section_' + elem_id + '" class="';
+        html += (section_type == 'main') ? ' sections"' : ' sub-sections"';
         html += ' ><div id = "builder_' + elem_id + '" class= "condition builder"';
         html += '></div >' +
             '<div class="container conditions-section" id="conditions-section_' + elem_id + '">' +
@@ -55,7 +55,7 @@ jQuery(document).ready(function () {
     }
 
     function createActionSection(elem_id, section_type, selector) {
-        var html = '<div id="section_' + elem_id + '" class="logics';
+        var html = '<div id="section_' + elem_id + '" class="';
         html += (section_type == 'main') ? ' sections"' : 'sub-sections"';
         html += ' ><div id = "builder_' + elem_id + '" class= "builder actions form-inline query-builder"';
         html += ' ><div class="rules-group-container"> </div></div></div>';
@@ -183,6 +183,7 @@ jQuery(document).ready(function () {
 
     $(document).on('click', '.btn-sub-condtion', function () {
         var parent_elem_id = $(this).data('elem-id');
+        console.log(parent_elem_id);
         var is_condition = $(this).data('condition');
         var elem_id = Math.round(new Date().getTime() + (Math.random() * 100));
         var select_yes_no = (is_condition === 'yes') ? $('#btn-sub-yes-select-action_' + parent_elem_id).val() : $('#btn-sub-no-select-action_' + parent_elem_id).val();
@@ -217,10 +218,11 @@ jQuery(document).ready(function () {
         queryRulesBuilder(elem_id);
     });
 
-    function dfs(element) {
+    $('body').on("click", '#btn-save-rules', function () {
+        var ruleSet = {};
         var set = [];
-
-        element.find('.logics').each(function () {
+        ruleSet['name'] = 'Rule_' + Math.round(new Date().getTime() + (Math.random() * 100));
+        $('.sections').each(function () {
             var sectionId = $(this).attr('id');
             var commonID = sectionId.split('_')[1];
             var builderElement = $('#builder_' + commonID);
@@ -229,22 +231,64 @@ jQuery(document).ready(function () {
             if (builderElement.length) {
                 item['conditions'] = $(builderElement).queryBuilder('getRules')
             }
+            var sub_rule_set_yes = {};
+            var sub_set_yes = [];
+            var sub_rule_set_no = {};
+            var sub_set_no = [];
 
-            item['logic'] = dfs($(this));
+            $(this).find('.yes-block .sub-sections').each(function () {
+                var sub_sectionId = $(this).attr('id');
+                var sub_commonID = sub_sectionId.split('_')[1];
+                var sub_builderElement = $('#builder_' + sub_commonID);
+
+                var sub_item = {};
+                sub_item['section_id'] = sub_sectionId;
+                if (sub_builderElement.length) {
+
+                    if (sub_builderElement.hasClass('condition')) {
+                        sub_item['type'] = 'condition';
+                        sub_item['condition'] = $(sub_builderElement).queryBuilder('getRules');
+                    } else {
+                        sub_item['type'] = 'action';
+                        sub_item['action'] = getActionSetJson(sub_commonID);
+                    }
+
+                }
+
+                sub_set_yes.push(sub_item);
+            });
+
+            sub_rule_set_yes['set'] = sub_set_yes;
+            item['if_yes'] = sub_rule_set_yes;
+
+            $(this).find('.no-block .sub-sections').each(function () {
+                var sub_sectionId = $(this).attr('id');
+                var sub_commonID = sub_sectionId.split('_')[1];
+                var sub_builderElement = $('#builder_' + sub_commonID);
+                var sub_item = {};
+                sub_item['section_id'] = sub_sectionId;
+                if (sub_builderElement.length) {
+
+                    if (sub_builderElement.hasClass('condition')) {
+                        sub_item['type'] = 'condition';
+                        sub_item['condition'] = $(sub_builderElement).queryBuilder('getRules');
+                    } else {
+                        sub_item['type'] = 'action';
+                        sub_item['action'] = getActionSetJson(sub_commonID);
+                    }
+                }
+
+                sub_set_no.push(sub_item);
+            });
+
+            sub_rule_set_no['set'] = sub_set_no;
+            item['if_no'] = sub_rule_set_no;
             set.push(item);
-        });
-        /* With each alert, the deepest element is made red. You may put your own logic*/
-        // ruleSet['set'] = set;
-        return set;
-        console.log(JSON.stringify(ruleSet, undefined, 2));
-        // element.css('border', '1px solid blue');
-    }
-    $('body').on("click", '#btn-save-rules', function () {
-        var ruleSet = {};
 
-        ruleSet['name'] = 'Rule_' + Math.round(new Date().getTime() + (Math.random() * 100));
-        ruleSet['set'] = dfs($('#container'));
+        });
+        ruleSet['set'] = set;
         console.log(JSON.stringify(ruleSet, undefined, 2));
+
     });
 
     $(document).on('click', '.btn-add-action', function () {

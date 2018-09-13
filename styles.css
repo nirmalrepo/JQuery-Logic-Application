@@ -6,6 +6,8 @@
     padding-right: 0px;
     padding-left: 0px;
     border: 1px solid #5cb85c;
+    margin-right: 10px;
+    float: left;
 }
 
 p.p-yes {
@@ -18,7 +20,8 @@ p.p-yes {
     padding-right: 0px;
     padding-left: 0px;
     border: 1px solid #ac2925;
-    margin-left: 2%;
+    float: none;
+    /* margin-left: 2%; */
 }
 
 p.p-no {
@@ -75,7 +78,7 @@ i.glyphicon-ok {
 i.glyphicon-remove {
     background-color: #ac2925;
     color: #ffff;
-    padding: 3px;
+    padding: 4px;
     top: 0%;
 }
 
@@ -115,17 +118,13 @@ i.glyphicon-remove {
     border-color: #007bff;
 }
 
-/* .action_select, add_more_actions_container {
+.action_select, add_more_actions_container {
     margin-bottom: 2%;
-} */
+}
 
 .action_select button {
     padding: 0px 12px;
     margin-top: -2px;
-}
-
-.select_action {
-    margin-right: 2%;
 }
 
 .hidden {
@@ -136,20 +135,16 @@ i.glyphicon-remove {
     margin-left: 2%;
 }
 
-/* .conditions-section>.row-fluid {
-    overflow-x: hidden;
-    white-space: nowrap;
-} */
-
 .conditions-section>.row-fluid div.yes-block, .conditions-section>.row-fluid div.no-block {
     display: inline-block;
-    float: none;
+    /* float: none; */
     width: auto;
 }
 
 #container {
     overflow-x: auto;
     white-space: nowrap;
+    clear: both;
 }
 
 .conditions-section {
@@ -161,4 +156,22 @@ i.glyphicon-remove {
     margin-top: 10%;
     margin-left: 30px;
     margin-right: 30px;
+}
+
+.sections>.condition {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.sub-sections .rule-value-container {
+    padding-right: 100px;
+}
+
+.actions.query-builder .rules-group-container {
+    border: none !important;
+    box-shadow: none !important;
+    background-color: transparent;
+    border-radius: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
