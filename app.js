@@ -29,7 +29,7 @@ jQuery(document).ready(function () {
             '<button type="button" class="btn btn-xs btn-success btn-clear-action" data-elem-id="' + elem_id + '" data-condition = "yes" id="btn-clear-action_yes_' + elem_id + '" data-add="rule"><i class="glyphicon glyphicon-plus"></i> Clear All</button>' +
             '<div style="clear:both"></div>' +
             '</div></div>' +
-            '<div class="row-fluid sub-yes" id="sub-yes_' + elem_id + '"></div>' +
+            '<div class="row-fluid sub-yes sub-logic" id="sub-yes_' + elem_id + '"></div>' +
             '</div>' +
             '<div class="no-block" id="no-block_' + elem_id + '">' +
             '<p class="p-no"><i class="glyphicon glyphicon-remove"></i> If False</p>' +
@@ -40,7 +40,7 @@ jQuery(document).ready(function () {
             '<button type="button" class="btn btn-xs btn-success btn-clear-action"  data-elem-id="' + elem_id + '" data-condition = "no" id="btn-clear-action_no_' + elem_id + '"  data-add="rule">         <i class="glyphicon glyphicon-plus"></i> Clear All</button>' +
             '<div style="clear:both"></div>' +
             '</div></div>' +
-            '<div class="row-fluid sub-no" id="sub-no_' + elem_id + '"></div>' +
+            '<div class="row-fluid sub-no sub-logic" id="sub-no_' + elem_id + '"></div>' +
             '</div>' +
             '</div>' +
             '</div>' +
@@ -220,25 +220,28 @@ jQuery(document).ready(function () {
     function dfs(element) {
         var set = [];
 
-        element.find('.logics').each(function () {
+        element.children('.logics').each(function () {
             var sectionId = $(this).attr('id');
             var commonID = sectionId.split('_')[1];
+
+            var child_yes = $('#sub-yes_' + commonID);
+            var child_no = $('#sub-no_' + commonID);
+            child_yes.css('border', '1px solid blue');
             var builderElement = $('#builder_' + commonID);
             var item = {};
-            item['section_id'] = sectionId;
+            item.section_id = sectionId;
             if (builderElement.length) {
-                item['conditions'] = $(builderElement).queryBuilder('getRules')
+                item.condition = $(builderElement).queryBuilder('getRules')
             }
-
-            item['logic'] = dfs($(this));
+            item.if_yes = dfs($(child_yes));
+            item.if_no = dfs($(child_no));
             set.push(item);
         });
-        /* With each alert, the deepest element is made red. You may put your own logic*/
-        // ruleSet['set'] = set;
+
         return set;
-        console.log(JSON.stringify(ruleSet, undefined, 2));
-        // element.css('border', '1px solid blue');
+
     }
+    
     $('body').on("click", '#btn-save-rules', function () {
         var ruleSet = {};
 
