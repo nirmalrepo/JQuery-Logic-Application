@@ -183,7 +183,6 @@ jQuery(document).ready(function () {
 
     $(document).on('click', '.btn-sub-condtion', function () {
         var parent_elem_id = $(this).data('elem-id');
-        console.log(parent_elem_id);
         var is_condition = $(this).data('condition');
         var elem_id = Math.round(new Date().getTime() + (Math.random() * 100));
         var select_yes_no = (is_condition === 'yes') ? $('#btn-sub-yes-select-action_' + parent_elem_id).val() : $('#btn-sub-no-select-action_' + parent_elem_id).val();
@@ -207,9 +206,6 @@ jQuery(document).ready(function () {
             createActionSection(elem_id, 'sub', wrapper)
             queryActionBuilder(elem_id, 1);
         }
-
-
-
     });
 
     $('#btn-create-rules').click(function () {

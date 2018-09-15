@@ -7,7 +7,7 @@
     padding-left: 0px;
     border: 1px solid #5cb85c;
     margin-right: 10px;
-    float: left;
+    float: none;
 }
 
 p.p-yes {
@@ -138,13 +138,13 @@ i.glyphicon-remove {
 .conditions-section>.row-fluid div.yes-block, .conditions-section>.row-fluid div.no-block {
     display: inline-block;
     /* float: none; */
-    width: auto;
+    /* width: auto; */
 }
 
 #container {
     overflow-x: auto;
     white-space: nowrap;
-    clear: both;
+    /* clear: both; */
 }
 
 .conditions-section {
@@ -153,7 +153,7 @@ i.glyphicon-remove {
 }
 
 .sub-yes, .sub-no {
-    margin-top: 10%;
+    margin-top: 5%;
     margin-left: 30px;
     margin-right: 30px;
 }

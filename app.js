@@ -54,9 +54,9 @@ jQuery(document).ready(function () {
 
     }
 
-    function createActionSection(elem_id, section_type, selector) {
-        var html = '<div id="section_' + elem_id + '" class="logics';
-        html += (section_type == 'main') ? ' sections"' : 'sub-sections"';
+    function createActionSection(elem_id, section_type, selector, parent_elem_id) {
+        var html = '<div id="section_' + elem_id + '" data-parent-id="' + parent_elem_id + '" class="logics ';
+        html += (section_type == 'main') ? 'sections"' : ' sub-sections"';
         html += ' ><div id = "builder_' + elem_id + '" class= "builder actions form-inline query-builder"';
         html += ' ><div class="rules-group-container"> </div></div></div>';
 
@@ -151,6 +151,56 @@ jQuery(document).ready(function () {
     }
 
 
+    function getActionSetJson(parent_elem_id) {
+        var action_type = $('#action_builder_rule_operator_' + parent_elem_id).val();
+        var field = $('#action_builder_rule_filter_' + parent_elem_id).val();
+        var action_value = $('#action_builder_rule_value_' + parent_elem_id).val();
+        var action_object = {
+            'actionType': action_type,
+            'field': field,
+            'actionValue': action_value
+        }
+
+        return action_object;
+    }
+
+    function dfs(element) {
+        var set = [];
+
+        element.children('.logics').each(function () {
+            var sectionId = $(this).attr('id');
+            var commonID = sectionId.split('_')[1];
+            var child_yes = $('#sub-yes_' + commonID);
+            var child_no = $('#sub-no_' + commonID);
+            var builderElement = $('#builder_' + commonID);
+            var item = {};
+            item.section_id = commonID;
+            item.section_type = ($(this).hasClass('sub-sections')) ? 'sub' : 'main';
+            if (builderElement.length) {
+                if (builderElement.hasClass('condition')) {
+                    item.type = 'condition';
+                    item.condition = $(builderElement).queryBuilder('getRules');
+                    item.if_yes = dfs($(child_yes));
+                    item.if_no = dfs($(child_no));
+
+                } else {
+                    item.type = 'action';
+                    item.parent_elem_id = $(this).data('parent-id')
+                    item.action_condtion = $(this).parent().hasClass('sub-yes') ? 'yes' : 'no';
+                    item.condition = getActionSetJson(commonID)
+                }
+            }
+
+
+            set.push(item);
+        });
+
+        return set;
+
+    }
+
+
+
     /****************************************************************
                             Triggers and Changers QueryBuilder
   *****************************************************************/
@@ -196,6 +246,7 @@ jQuery(document).ready(function () {
             }
 
         }
+
         if (action_type == 'condition') {
             createConditionalSection(elem_id, 'sub', wrapper)
             queryRulesBuilder(elem_id)
@@ -203,7 +254,7 @@ jQuery(document).ready(function () {
             $(this).parent().addClass('hidden');
             $(this).closest('.row-fluid').find('.add_more_actions_container').removeClass('hidden');
             $(wrapper).html('');
-            createActionSection(elem_id, 'sub', wrapper)
+            createActionSection(elem_id, 'sub', wrapper, parent_elem_id)
             queryActionBuilder(elem_id, 1);
         }
 
@@ -217,31 +268,7 @@ jQuery(document).ready(function () {
         queryRulesBuilder(elem_id);
     });
 
-    function dfs(element) {
-        var set = [];
 
-        element.children('.logics').each(function () {
-            var sectionId = $(this).attr('id');
-            var commonID = sectionId.split('_')[1];
-
-            var child_yes = $('#sub-yes_' + commonID);
-            var child_no = $('#sub-no_' + commonID);
-            child_yes.css('border', '1px solid blue');
-            var builderElement = $('#builder_' + commonID);
-            var item = {};
-            item.section_id = sectionId;
-            if (builderElement.length) {
-                item.condition = $(builderElement).queryBuilder('getRules')
-            }
-            item.if_yes = dfs($(child_yes));
-            item.if_no = dfs($(child_no));
-            set.push(item);
-        });
-
-        return set;
-
-    }
-    
     $('body').on("click", '#btn-save-rules', function () {
         var ruleSet = {};
 
