@@ -1,168 +1,10 @@
 
 jQuery(document).ready(function () {
-  // var json_object = {
-  //   "name": "Rule_1536980001875",
-  //   "set": [
-  //     {
-  //       "section_id": "1536966564604",
-  //       "section_type": "main",
-  //       "type": "condition",
-  //       "condition": {
-  //         "condition": "AND",
-  //         "rules": [
-  //           {
-  //             "id": "FIELD_4",
-  //             "field": "FIELD_4",
-  //             "type": "string",
-  //             "input": "text",
-  //             "operator": "equal",
-  //             "value": 10
-  //           }
-  //         ],
-  //         "valid": true
-  //       },
-  //       "if_yes": [
-  //         {
-  //           "section_id": "1536966567360",
-  //           "section_type": "sub",
-  //           "type": "condition",
-  //           "condition": {
-  //             "condition": "AND",
-  //             "rules": [
-  //               {
-  //                 "id": "FIELD_4",
-  //                 "field": "FIELD_4",
-  //                 "type": "string",
-  //                 "input": "text",
-  //                 "operator": "equal",
-  //                 "value": "11"
-  //               }
-  //             ],
-  //             "valid": true
-  //           },
-  //           "if_yes": [
-  //             {
-  //               "section_id": "1536966577075",
-  //               "section_type": "sub",
-  //               "type": "condition",
-  //               "condition": {
-  //                 "condition": "AND",
-  //                 "rules": [
-  //                   {
-  //                     "id": "FIELD_4",
-  //                     "field": "FIELD_4",
-  //                     "type": "string",
-  //                     "input": "text",
-  //                     "operator": "equal",
-  //                     "value": "13"
-  //                   }
-  //                 ],
-  //                 "valid": true
-  //               },
-  //               "if_yes": [],
-  //               "if_no": []
-  //             }
-  //           ],
-  //           "if_no": []
-  //         }
-  //       ],
-  //       "if_no": [
-  //         {
-  //           "section_id": "1536966571849",
-  //           "section_type": "sub",
-  //           "type": "condition",
-  //           "condition": {
-  //             "condition": "AND",
-  //             "rules": [
-  //               {
-  //                 "id": "FIELD_4",
-  //                 "field": "FIELD_4",
-  //                 "type": "string",
-  //                 "input": "text",
-  //                 "operator": "equal",
-  //                 "value": "12"
-  //               }
-  //             ],
-  //             "valid": true
-  //           },
-  //           "if_yes": [
-  //             {
-  //               "section_id": "1536979986375",
-  //               "section_type": "sub",
-  //               "type": "condition",
-  //               "condition": {
-  //                 "condition": "AND",
-  //                 "rules": [
-  //                   {
-  //                     "id": "FIELD_4",
-  //                     "field": "FIELD_4",
-  //                     "type": "string",
-  //                     "input": "text",
-  //                     "operator": "equal",
-  //                     "value": 10
-  //                   }
-  //                 ],
-  //                 "valid": true
-  //               },
-  //               "if_yes": [],
-  //               "if_no": [
-  //                 {
-  //                   "section_id": "1536979988978",
-  //                   "section_type": "sub",
-  //                   "type": "condition",
-  //                   "condition": {
-  //                     "condition": "AND",
-  //                     "rules": [
-  //                       {
-  //                         "id": "FIELD_4",
-  //                         "field": "FIELD_4",
-  //                         "type": "string",
-  //                         "input": "text",
-  //                         "operator": "equal",
-  //                         "value": 10
-  //                       }
-  //                     ],
-  //                     "valid": true
-  //                   },
-  //                   "if_yes": [],
-  //                   "if_no": []
-  //                 }
-  //               ]
-  //             }
-  //           ],
-  //           "if_no": []
-  //         }
-  //       ]
-  //     },
-  //     {
-  //       "section_id": "1536979991104",
-  //       "section_type": "main",
-  //       "type": "condition",
-  //       "condition": {
-  //         "condition": "AND",
-  //         "rules": [
-  //           {
-  //             "id": "FIELD_4",
-  //             "field": "FIELD_4",
-  //             "type": "string",
-  //             "input": "text",
-  //             "operator": "equal",
-  //             "value": "122"
-  //           }
-  //         ],
-  //         "valid": true
-  //       },
-  //       "if_yes": [],
-  //       "if_no": []
-  //     }
-  //   ]
-  // }
-
-  var json_object = {
-    "name": "Rule_1537004937997",
+  var json_object ={
+    "name": "Rule_1537414919493",
     "set": [
       {
-        "section_id": "1537004897472",
+        "section_id": "1537414577173",
         "section_type": "main",
         "type": "condition",
         "condition": {
@@ -181,7 +23,7 @@ jQuery(document).ready(function () {
         },
         "if_yes": [
           {
-            "section_id": "1537004900817",
+            "section_id": "1537414579182",
             "section_type": "sub",
             "type": "condition",
             "condition": {
@@ -200,7 +42,7 @@ jQuery(document).ready(function () {
             },
             "if_yes": [
               {
-                "section_id": "1537004903369",
+                "section_id": "1537414589452",
                 "section_type": "sub",
                 "type": "condition",
                 "condition": {
@@ -217,10 +59,32 @@ jQuery(document).ready(function () {
                   ],
                   "valid": true
                 },
-                "if_yes": [],
+                "if_yes": [
+                  {
+                    "section_id": "1537414865807",
+                    "section_type": "sub",
+                    "type": "condition",
+                    "condition": {
+                      "condition": "AND",
+                      "rules": [
+                        {
+                          "id": "FIELD_4",
+                          "field": "FIELD_4",
+                          "type": "string",
+                          "input": "text",
+                          "operator": "equal",
+                          "value": 10
+                        }
+                      ],
+                      "valid": true
+                    },
+                    "if_yes": [],
+                    "if_no": []
+                  }
+                ],
                 "if_no": [
                   {
-                    "section_id": "1537004909326",
+                    "section_id": "1537414607681",
                     "section_type": "sub",
                     "type": "condition",
                     "condition": {
@@ -245,7 +109,7 @@ jQuery(document).ready(function () {
             ],
             "if_no": [
               {
-                "section_id": "1537004905812",
+                "section_id": "1537414596479",
                 "section_type": "sub",
                 "type": "condition",
                 "condition": {
@@ -264,7 +128,7 @@ jQuery(document).ready(function () {
                 },
                 "if_yes": [
                   {
-                    "section_id": "1537004911784",
+                    "section_id": "1537414614069",
                     "section_type": "sub",
                     "type": "condition",
                     "condition": {
@@ -281,35 +145,13 @@ jQuery(document).ready(function () {
                       ],
                       "valid": true
                     },
-                    "if_yes": [
-                      {
-                        "section_id": "1537004914623",
-                        "section_type": "sub",
-                        "type": "condition",
-                        "condition": {
-                          "condition": "AND",
-                          "rules": [
-                            {
-                              "id": "FIELD_4",
-                              "field": "FIELD_4",
-                              "type": "string",
-                              "input": "text",
-                              "operator": "equal",
-                              "value": 10
-                            }
-                          ],
-                          "valid": true
-                        },
-                        "if_yes": [],
-                        "if_no": []
-                      }
-                    ],
+                    "if_yes": [],
                     "if_no": []
                   }
                 ],
                 "if_no": [
                   {
-                    "section_id": "1537004918729",
+                    "section_id": "1537414871029",
                     "section_type": "sub",
                     "type": "condition",
                     "condition": {
@@ -326,44 +168,436 @@ jQuery(document).ready(function () {
                       ],
                       "valid": true
                     },
-                    "if_yes": [
-                      {
-                        "section_id": "1537004923795",
-                        "section_type": "sub",
-                        "type": "action",
-                        "parent_elem_id": 1537004918729,
-                        "action_condtion": "yes",
-                        "condition": {
-                          "actionType": "Set Value",
-                          "field": "-1",
-                          "actionValue": ""
-                        }
-                      }
-                    ],
-                    "if_no": [
-                      {
-                        "section_id": "1537004928039",
-                        "section_type": "sub",
-                        "type": "action",
-                        "parent_elem_id": 1537004918729,
-                        "action_condtion": "no",
-                        "condition": {
-                          "actionType": "Set Value",
-                          "field": "-1",
-                          "actionValue": ""
-                        }
-                      }
-                    ]
+                    "if_yes": [],
+                    "if_no": []
                   }
                 ]
               }
             ]
           }
         ],
-        "if_no": []
+        "if_no": [
+          {
+            "section_id": "1537414582928",
+            "section_type": "sub",
+            "type": "condition",
+            "condition": {
+              "condition": "AND",
+              "rules": [
+                {
+                  "id": "FIELD_4",
+                  "field": "FIELD_4",
+                  "type": "string",
+                  "input": "text",
+                  "operator": "equal",
+                  "value": 10
+                }
+              ],
+              "valid": true
+            },
+            "if_yes": [
+              {
+                "section_id": "1537414836873",
+                "section_type": "sub",
+                "type": "action",
+                "parent_elem_id": 1537414582928,
+                "action_condtion": "yes",
+                "action": {
+                  "action_type": "-1",
+                  "apply_to": "-1",
+                  "field": "-1",
+                  "action_value": ""
+                }
+              }
+            ],
+            "if_no": [
+              {
+                "section_id": "1537414842237",
+                "section_type": "sub",
+                "type": "condition",
+                "condition": {
+                  "condition": "AND",
+                  "rules": [
+                    {
+                      "id": "FIELD_4",
+                      "field": "FIELD_4",
+                      "type": "string",
+                      "input": "text",
+                      "operator": "equal",
+                      "value": 10
+                    }
+                  ],
+                  "valid": true
+                },
+                "if_yes": [],
+                "if_no": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "section_id": "1537414879615",
+        "section_type": "main",
+        "type": "condition",
+        "condition": {
+          "condition": "AND",
+          "rules": [
+            {
+              "id": "FIELD_4",
+              "field": "FIELD_4",
+              "type": "string",
+              "input": "text",
+              "operator": "equal",
+              "value": 10
+            }
+          ],
+          "valid": true
+        },
+        "if_yes": [
+          {
+            "section_id": "1537414882836",
+            "section_type": "sub",
+            "type": "condition",
+            "condition": {
+              "condition": "AND",
+              "rules": [
+                {
+                  "id": "FIELD_4",
+                  "field": "FIELD_4",
+                  "type": "string",
+                  "input": "text",
+                  "operator": "equal",
+                  "value": 10
+                }
+              ],
+              "valid": true
+            },
+            "if_yes": [
+              {
+                "section_id": "1537414889306",
+                "section_type": "sub",
+                "type": "condition",
+                "condition": {
+                  "condition": "AND",
+                  "rules": [
+                    {
+                      "id": "FIELD_4",
+                      "field": "FIELD_4",
+                      "type": "string",
+                      "input": "text",
+                      "operator": "equal",
+                      "value": 10
+                    }
+                  ],
+                  "valid": true
+                },
+                "if_yes": [],
+                "if_no": []
+              }
+            ],
+            "if_no": [
+              {
+                "section_id": "1537414891845",
+                "section_type": "sub",
+                "type": "condition",
+                "condition": {
+                  "condition": "AND",
+                  "rules": [
+                    {
+                      "id": "FIELD_4",
+                      "field": "FIELD_4",
+                      "type": "string",
+                      "input": "text",
+                      "operator": "equal",
+                      "value": 10
+                    }
+                  ],
+                  "valid": true
+                },
+                "if_yes": [],
+                "if_no": []
+              }
+            ]
+          }
+        ],
+        "if_no": [
+          {
+            "section_id": "1537414885564",
+            "section_type": "sub",
+            "type": "condition",
+            "condition": {
+              "condition": "AND",
+              "rules": [
+                {
+                  "id": "FIELD_4",
+                  "field": "FIELD_4",
+                  "type": "string",
+                  "input": "text",
+                  "operator": "equal",
+                  "value": 10
+                }
+              ],
+              "valid": true
+            },
+            "if_yes": [
+              {
+                "section_id": "1537414893972",
+                "section_type": "sub",
+                "type": "condition",
+                "condition": {
+                  "condition": "AND",
+                  "rules": [
+                    {
+                      "id": "FIELD_4",
+                      "field": "FIELD_4",
+                      "type": "string",
+                      "input": "text",
+                      "operator": "equal",
+                      "value": 10
+                    }
+                  ],
+                  "valid": true
+                },
+                "if_yes": [],
+                "if_no": []
+              }
+            ],
+            "if_no": [
+              {
+                "section_id": "1537414896268",
+                "section_type": "sub",
+                "type": "condition",
+                "condition": {
+                  "condition": "AND",
+                  "rules": [
+                    {
+                      "id": "FIELD_4",
+                      "field": "FIELD_4",
+                      "type": "string",
+                      "input": "text",
+                      "operator": "equal",
+                      "value": 10
+                    }
+                  ],
+                  "valid": true
+                },
+                "if_yes": [
+                  {
+                    "section_id": "1537414900894",
+                    "section_type": "sub",
+                    "type": "condition",
+                    "condition": {
+                      "condition": "AND",
+                      "rules": [
+                        {
+                          "id": "FIELD_4",
+                          "field": "FIELD_4",
+                          "type": "string",
+                          "input": "text",
+                          "operator": "equal",
+                          "value": 10
+                        }
+                      ],
+                      "valid": true
+                    },
+                    "if_yes": [],
+                    "if_no": []
+                  }
+                ],
+                "if_no": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "section_id": "1537414903276",
+        "section_type": "main",
+        "type": "condition",
+        "condition": {
+          "condition": "AND",
+          "rules": [
+            {
+              "id": "FIELD_4",
+              "field": "FIELD_4",
+              "type": "string",
+              "input": "text",
+              "operator": "equal",
+              "value": 10
+            }
+          ],
+          "valid": true
+        },
+        "if_yes": [
+          {
+            "section_id": "1537414906264",
+            "section_type": "sub",
+            "type": "condition",
+            "condition": {
+              "condition": "AND",
+              "rules": [
+                {
+                  "id": "FIELD_4",
+                  "field": "FIELD_4",
+                  "type": "string",
+                  "input": "text",
+                  "operator": "equal",
+                  "value": 10
+                }
+              ],
+              "valid": true
+            },
+            "if_yes": [],
+            "if_no": []
+          }
+        ],
+        "if_no": [
+          {
+            "section_id": "1537414911490",
+            "section_type": "sub",
+            "type": "action",
+            "parent_elem_id": 1537414903276,
+            "action_condtion": "no",
+            "action": {
+              "action_type": "-1",
+              "apply_to": "-1",
+              "field": "-1",
+              "action_value": "10"
+            }
+          }
+        ]
       }
     ]
   }
+
+  // var json_object = {
+  //   "name": "Rule_1537039582358",
+  //   "set": [
+  //     {
+  //       "section_id": "1537039531669",
+  //       "section_type": "main",
+  //       "type": "condition",
+  //       "condition": {
+  //         "condition": "AND",
+  //         "rules": [
+  //           {
+  //             "id": "FIELD_4",
+  //             "field": "FIELD_4",
+  //             "type": "string",
+  //             "input": "text",
+  //             "operator": "equal",
+  //             "value": 10
+  //           }
+  //         ],
+  //         "valid": true
+  //       },
+  //       "if_yes": [
+  //         {
+  //           "section_id": "1537039535392",
+  //           "section_type": "sub",
+  //           "type": "condition",
+  //           "condition": {
+  //             "condition": "AND",
+  //             "rules": [
+  //               {
+  //                 "id": "FIELD_4",
+  //                 "field": "FIELD_4",
+  //                 "type": "string",
+  //                 "input": "text",
+  //                 "operator": "equal",
+  //                 "value": "11"
+  //               }
+  //             ],
+  //             "valid": true
+  //           },
+  //           "if_yes": [
+  //             {
+  //               "section_id": "1537039545328",
+  //               "section_type": "sub",
+  //               "type": "condition",
+  //               "condition": {
+  //                 "condition": "AND",
+  //                 "rules": [
+  //                   {
+  //                     "id": "FIELD_4",
+  //                     "field": "FIELD_4",
+  //                     "type": "string",
+  //                     "input": "text",
+  //                     "operator": "equal",
+  //                     "value": "12"
+  //                   }
+  //                 ],
+  //                 "valid": true
+  //               },
+  //               "if_yes": [
+  //                 {
+  //                   "section_id": "1537039555681",
+  //                   "section_type": "sub",
+  //                   "type": "action",
+  //                   "parent_elem_id": 1537039545328,
+  //                   "action_condtion": "yes",
+  //                   "condition": {
+  //                     "actionType": "Set Value",
+  //                     "field": "FIELD_4",
+  //                     "actionValue": "14"
+  //                   }
+  //                 }
+  //               ],
+  //               "if_no": []
+  //             }
+  //           ],
+  //           "if_no": [
+  //             {
+  //               "section_id": "1537039550052",
+  //               "section_type": "sub",
+  //               "type": "condition",
+  //               "condition": {
+  //                 "condition": "AND",
+  //                 "rules": [
+  //                   {
+  //                     "id": "FIELD_4",
+  //                     "field": "FIELD_4",
+  //                     "type": "string",
+  //                     "input": "text",
+  //                     "operator": "equal",
+  //                     "value": "13"
+  //                   }
+  //                 ],
+  //                 "valid": true
+  //               },
+  //               "if_yes": [],
+  //               "if_no": []
+  //             }
+  //           ]
+  //         }
+  //       ],
+  //       "if_no": [
+  //         {
+  //           "section_id": "1537039569786",
+  //           "section_type": "sub",
+  //           "type": "condition",
+  //           "condition": {
+  //             "condition": "AND",
+  //             "rules": [
+  //               {
+  //                 "id": "FIELD_4",
+  //                 "field": "FIELD_4",
+  //                 "type": "string",
+  //                 "input": "text",
+  //                 "operator": "equal",
+  //                 "value": "15"
+  //               }
+  //             ],
+  //             "valid": true
+  //           },
+  //           "if_yes": [],
+  //           "if_no": []
+  //         }
+  //       ]
+  //     }
+  //   ]
+  // }
 
   createLogicTree(json_object.set, '#container');
 
@@ -462,7 +696,7 @@ jQuery(document).ready(function () {
     $(selector).append(html);
   }
 
-  function queryActionBuilder(elem_id) {
+  function queryActionBuilder(elem_id, rule) {
     var html = '<div class="rules-group-body action-container" id="action_container_' + elem_id + '">' +
       '<div class="rules-list">' +
       '<div id="action_builder_' + elem_id + '_rule" class="rule-container">' +
@@ -489,13 +723,16 @@ jQuery(document).ready(function () {
       '</div>';
 
     $('#builder_' + elem_id + ' .rules-group-container').append(html)
+    $('#action_builder_rule_operator_' + elem_id).val(rule.action_type)
+    $('#action_builder_rule_filter_' + elem_id).val(rule.field)
+    $('#action_builder_rule_value_' + elem_id).val(rule.action_value)
   }
   function buildActionSections(item) {
     console.log(item)
     var wrapper = item.action_condtion == 'yes' ? '#sub-yes_' + item.parent_elem_id : '#sub-no_' + item.parent_elem_id;
 
     createActionSection(item.section_id, 'sub', wrapper, item.parent_elem_id)
-    queryActionBuilder(item.section_id, 1);
+    queryActionBuilder(item.section_id, item.action);
   }
 
   function createLogicTree(json_object, wrapper) {

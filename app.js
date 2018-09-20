@@ -12,17 +12,26 @@ jQuery(document).ready(function () {
         },
     };
 
-    function createConditionalSection(elem_id, section_type, selector) {
+    /**
+     *Create a conditional section
+     *
+     * @param {string} elem_id
+     * @param {string} section_type
+     * @param {object} selector
+     * @param {string} super_parent_elem_id
+     */
+
+    function createConditionalSection(elem_id, section_type, selector, super_parent_elem_id) {
         var html = '<div id="section_' + elem_id + '" class="logics ';
         html += (section_type == 'main') ? 'sections"' : ' sub-sections"';
         html += ' ><div id = "builder_' + elem_id + '" class= "condition builder"';
-        html += '></div >' +
+        html += '></div ><h1 class="down-arrow">&#x2193</h1>' +
             '<div class="container conditions-section" id="conditions-section_' + elem_id + '">' +
             '<div class="row-fluid">' +
             '<div class="yes-block" id="yes-block_' + elem_id + '">' +
             '<p class="p-yes"><i class="glyphicon glyphicon-ok"></i> If True</p>' +
             '<div class="row-fluid"> <div class="col-md-5 action_select"  id="action_select_yes_' + elem_id + '"><select class="select_action" id="btn-sub-yes-select-action_' + elem_id + '"> <option value="">select action</option> <option value="condition">Condition</option><option value="action">Action</option></select>' +
-            '<button class="btn btn-outline-primary btn-sub-condtion" data-elem-id="' + elem_id + '" data-condition = "yes" id="btn-sub-yes-condition_' + elem_id + '">select</button>' +
+            '<button class="btn btn-outline-primary btn-sub-condtion" data-elem-id="' + elem_id + '" data-super-parent-elem-id="' + super_parent_elem_id + '" data-condition = "yes" id="btn-sub-yes-condition_' + elem_id + '">select</button>' +
             '</div>' +
             '<div class="col-md-5  add_more_actions_container hidden" id="add_more_actions_container_yes_' + elem_id + '">' +
             '<button type="button" class="btn btn-xs btn-success btn-add-action" data-elem-id="' + elem_id + '" data-condition = "yes" id="btn-add-action_yes_' + elem_id + '" data-add="rule"><i class="glyphicon glyphicon-plus"></i> Add action</button>' +
@@ -36,7 +45,7 @@ jQuery(document).ready(function () {
             '<div class="row-fluid"> <div class="col-md-5 action_select"  id="action_select_no_' + elem_id + '"><select class="select_action" id="btn-sub-no-select-action_' + elem_id + '"> <option value="">select action</option> <option value="condition">Condition</option><option value="action">Action</option></select><button class="btn btn-outline-primary btn-sub-condtion" data-elem-id="' + elem_id + '" data-condition = "no" id="btn-sub-no-condition_' + elem_id + '">select</button>' +
             '</div>' +
             '<div class="col-md-5 add_more_actions_container hidden" id="add_more_actions_container_no_' + elem_id + '">' +
-            '<button type="button" class="btn btn-xs btn-success btn-add-action" data-elem-id="' + elem_id + '"  data-condition = "no" id="btn-add-action_no_' + elem_id + '" data-add="rule"><i class="glyphicon glyphicon-plus"></i> Add action</button>' +
+            '<button type="button" class="btn btn-xs btn-success btn-add-action" data-elem-id="' + elem_id + '"  data-super-parent-elem-id="' + super_parent_elem_id + '" data-condition = "no" id="btn-add-action_no_' + elem_id + '" data-add="rule"><i class="glyphicon glyphicon-plus"></i> Add action</button>' +
             '<button type="button" class="btn btn-xs btn-success btn-clear-action"  data-elem-id="' + elem_id + '" data-condition = "no" id="btn-clear-action_no_' + elem_id + '"  data-add="rule">         <i class="glyphicon glyphicon-plus"></i> Clear All</button>' +
             '<div style="clear:both"></div>' +
             '</div></div>' +
@@ -47,13 +56,21 @@ jQuery(document).ready(function () {
             '</div>';
         $(selector).append(html);
         if ((section_type == 'main')) {
-            $('#yes-block_' + elem_id).css('width', '50%');
-            $('#no-block_' + elem_id).css('width', '50%');
+            $('#yes-block_' + elem_id).css('width', '750px');
+            $('#no-block_' + elem_id).css('width', '750px');
 
         }
 
     }
 
+    /**
+     * Create an action section wrapper
+     *
+     * @param {string} elem_id
+     * @param {string} section_type
+     * @param {object} selector
+     * @param {string} parent_elem_id
+     */
     function createActionSection(elem_id, section_type, selector, parent_elem_id) {
         var html = '<div id="section_' + elem_id + '" data-parent-id="' + parent_elem_id + '" class="logics ';
         html += (section_type == 'main') ? 'sections"' : ' sub-sections"';
@@ -63,6 +80,11 @@ jQuery(document).ready(function () {
         $(selector).append(html);
     }
 
+    /**
+     *Create an action section
+     *
+     * @param {string} elem_id
+     */
     function queryActionBuilder(elem_id) {
         var html = '<div class="rules-group-body action-container" id="action_container_' + elem_id + '">' +
             '<div class="rules-list">' +
@@ -70,21 +92,40 @@ jQuery(document).ready(function () {
             '<div class="rule-header">' +
             '<div class="btn-group pull-right rule-actions" > <button type="button" class="btn btn-xs btn-danger remove-action" data-delete="rule" data-elem-id="' + elem_id + '">' +
             '<i class="glyphicon glyphicon-remove"></i>' +
-            'Delete </button> </div >' +
+            '</button> </div >' +
             '</div >' +
-            '<div class="rule-operator-container"><select class="form-control " id="action_builder_rule_operator_' + elem_id + '">' +
-            '< option value = "-1" > select action</option >' +
+            '<div class="rule-operator-container">' +
+            '<select class="form-control action-ctrl" id="action_builder_rule_operator_' + elem_id + '">' +
+            '<option value = "-1">Select action</option>' +
             '<option>Set Value</option>' +
             '<option>Show</option>' +
-            '<option>Show (dont toggle)</option>' +
+            '<option>Show (don"t toggle)</option>' +
             '<option>Show (and content)</option>' +
-            '<option> Hide</option></select ></div >' +
+            '<option>Hide</option>' +
+            '<option>Hide (don"t toggle)</option > ' +
+            '<option>Hide and clear values</option>' +
+            '<option>Enable</option>' +
+            '<option>Enable (don"t toggle)</option>' +
+            '<option>Disable</option>' +
+            '<option>Disable (don"t toggle)</option>' +
+            '<option>Show Message Box</option>' +
+            '<option>Show Form</option>' +
+            '<option>Hide Form </option>' +
+            '<option>Set Document Template</option>' +
+            '<option>Append Document Template</option>' +
+            '</select ></div >' +
+            '<div class="rule-operator-container">' +
+            '<select class="form-control " id="action_builder_rule_apply_to_' + elem_id + '">' +
+            '<option value = "-1"> Apply to</option>' +
+            '<option>Current Repeat</option>' +
+            '<option>Entire Form</option>' +
+            '</select ></div >' +
             '<div class="rule-filter-container"><select class="form-control" id="action_builder_rule_filter_' + elem_id + '">' +
-            '<option value="-1">------</option>' +
+            '<option value="-1">Select field</option>' +
             '<option value="FIELD_4">FIELD_4</option>' +
             '<option value="FIELD_5">FIELD_5</option>' +
             '<option value="FIELD_6">FIELD_6</option>' +
-            '<option value="id">Identifier</option> </select></div>' +
+            '</select></div>' +
             '<div class="rule-value-container"><input class="form-control" type="text" id="action_builder_rule_value_' + elem_id + '"></div>' +
             '</div>' +
             '</div>';
@@ -92,18 +133,12 @@ jQuery(document).ready(function () {
         $('#builder_' + elem_id + ' .rules-group-container').append(html)
     }
 
-    function getActionSetJson(parent_elem_id) {
-        var action_type = $('#action_builder_rule_operator_' + parent_elem_id).val();
-        var field = $('#action_builder_rule_filter_' + parent_elem_id).val();
-        var action_value = $('#action_builder_rule_value_' + parent_elem_id).val();
-        var action_object = {
-            'actionType': action_type,
-            'field': field,
-            'actionValue': action_value
-        }
 
-        return action_object;
-    }
+    /**
+     *JQuery query builder for conditional section
+     *
+     * @param {string} elem_id
+     */
     function queryRulesBuilder(elem_id) {
         jQuery('#builder_' + elem_id).queryBuilder({
             plugins: ['bt-tooltip-errors'],
@@ -151,22 +186,35 @@ jQuery(document).ready(function () {
     }
 
 
+    /**
+     *Create an action set json object
+     *
+     * @param {string} parent_elem_id
+     * @returns {object}
+     */
     function getActionSetJson(parent_elem_id) {
         var action_type = $('#action_builder_rule_operator_' + parent_elem_id).val();
+        var apply_to = $('#action_builder_rule_apply_to_' + parent_elem_id).val();
         var field = $('#action_builder_rule_filter_' + parent_elem_id).val();
         var action_value = $('#action_builder_rule_value_' + parent_elem_id).val();
         var action_object = {
-            'actionType': action_type,
+            'action_type': action_type,
+            'apply_to': apply_to,
             'field': field,
-            'actionValue': action_value
+            'action_value': action_value
         }
-
         return action_object;
     }
 
+
+    /**
+     *Recursive function to create logic app object tree including all the nodes
+     *
+     * @param {object} element
+     * @returns {Array}
+     */
     function dfs(element) {
         var set = [];
-
         element.children('.logics').each(function () {
             var sectionId = $(this).attr('id');
             var commonID = sectionId.split('_')[1];
@@ -182,28 +230,82 @@ jQuery(document).ready(function () {
                     item.condition = $(builderElement).queryBuilder('getRules');
                     item.if_yes = dfs($(child_yes));
                     item.if_no = dfs($(child_no));
-
                 } else {
                     item.type = 'action';
                     item.parent_elem_id = $(this).data('parent-id')
                     item.action_condtion = $(this).parent().hasClass('sub-yes') ? 'yes' : 'no';
-                    item.condition = getActionSetJson(commonID)
+                    item.action = getActionSetJson(commonID)
                 }
             }
-
-
             set.push(item);
         });
-
         return set;
 
     }
 
+    /**
+     * Show or hide the action fields
+     *
+     * @param {object} e
+     */
+    function showHideActionValues(e) {
+        var commonID = $(e).attr('id').split('_')[4]
+        var ctrl = $(e).closest('.rule-container').find('.rule-value-container');
+        var fieldselect = $('#action_builder_rule_filter_' + commonID);
+        var applyto = $('#action_builder_rule_apply_to_' + commonID);
 
+        if (e.value == 'Set Value' || e.value == 'Show Message Box' || e.value == 'Set Document Template' || e.value == 'Append Document Template') {
+            $('#action_builder_rule_value_' + commonID).prop('disabled', false);
+        }
+        else {
+
+            if (e.value == "Show Form" || e.value == "Hide Form") {
+                $(applyto).first().prop('disabled', true);
+                $(applyto).first().prop('disabled', true);
+
+            } else {
+                $(applyto).first().prop('disabled', false);
+                $(applyto).first().prop('disabled', false);
+            }
+
+            $('#action_builder_rule_value_' + commonID).val('');
+            $('#action_builder_rule_value_' + commonID).prop('disabled', true);
+        }
+
+        if (e.value == 'Show Message Box') {
+            $(fieldselect).first().prop('disabled', true);
+            $(fieldselect).first().prop('disabled', true);
+            $(applyto).first().prop('disabled', true);
+            $(applyto).first().prop('disabled', true);
+
+        }
+        else {
+            $(fieldselect).first().prop('disabled', false);
+            $(fieldselect).first().prop('disabled', false);
+
+            if (e.value == "Show Form" || e.value == "Hide Form") {
+                $(applyto).first().prop('disabled', true);
+                $(applyto).first().prop('disabled', true);
+
+            } else {
+                $(applyto).first().prop('disabled', false);
+                $(applyto).first().prop('disabled', false);
+            }
+
+        }
+
+        if (e.value == 'Set Document Template' || e.value == 'Append Document Template') {
+            $(applyto).first().prop('disabled', true);
+            $(fieldselect).first().prop('disabled', true);
+
+            $(ctrl).first().find('input').prop('disabled', false);
+        }
+
+    }
 
     /****************************************************************
-                            Triggers and Changers QueryBuilder
-  *****************************************************************/
+                            Triggers and Changers
+    *****************************************************************/
 
     $('#btn-get').on('click', function () {
         var result = $('#builder').queryBuilder('getRules');
@@ -238,6 +340,8 @@ jQuery(document).ready(function () {
         var select_yes_no = (is_condition === 'yes') ? $('#btn-sub-yes-select-action_' + parent_elem_id).val() : $('#btn-sub-no-select-action_' + parent_elem_id).val();
         var action_type = (select_yes_no == 'condition') ? 'condition' : (select_yes_no == 'action') ? 'action' : '';
         var wrapper = (is_condition === 'yes') ? '#sub-yes_' + parent_elem_id : '#sub-no_' + parent_elem_id;
+
+
         if ($('#section_' + parent_elem_id).hasClass('sections')) {
             if (is_condition === 'yes') {
                 $('#section_' + parent_elem_id + ' .yes-block').removeAttr('style');
@@ -246,9 +350,8 @@ jQuery(document).ready(function () {
             }
 
         }
-
         if (action_type == 'condition') {
-            createConditionalSection(elem_id, 'sub', wrapper)
+            createConditionalSection(elem_id, 'sub', wrapper, parent_elem_id)
             queryRulesBuilder(elem_id)
         } else if (action_type == 'action') {
             $(this).parent().addClass('hidden');
@@ -258,20 +361,19 @@ jQuery(document).ready(function () {
             queryActionBuilder(elem_id, 1);
         }
 
-
-
+        $(".btn-danger").contents().filter(function () { return this.nodeType == 3; }).remove();
     });
 
     $('#btn-create-rules').click(function () {
         var elem_id = Math.round(new Date().getTime() + (Math.random() * 100));
         createConditionalSection(elem_id, 'main', '#container')
         queryRulesBuilder(elem_id);
+        $(".btn-danger").contents().filter(function () { return this.nodeType == 3; }).remove();
     });
 
 
     $('body').on("click", '#btn-save-rules', function () {
         var ruleSet = {};
-
         ruleSet['name'] = 'Rule_' + Math.round(new Date().getTime() + (Math.random() * 100));
         ruleSet['set'] = dfs($('#container'));
         console.log(JSON.stringify(ruleSet, undefined, 2));
@@ -282,7 +384,7 @@ jQuery(document).ready(function () {
         var is_condition = $(this).data('condition');
         elem_id = Math.round(new Date().getTime() + (Math.random() * 100));
         var wrapper = (is_condition === 'yes') ? '#sub-yes_' + parent_elem_id : '#sub-no_' + parent_elem_id;
-        createActionSection(elem_id, 'sub', wrapper)
+        createActionSection(elem_id, 'sub', wrapper, parent_elem_id)
         queryActionBuilder(elem_id);
     });
 
@@ -317,5 +419,8 @@ jQuery(document).ready(function () {
         $(this).closest('.action-container').remove();
     });
 
+    $(document).on('change', '.action-ctrl', function () {
+        showHideActionValues(this)
+    });
 
 });
