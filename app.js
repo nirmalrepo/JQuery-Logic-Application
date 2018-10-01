@@ -1,6 +1,5 @@
 
 jQuery(document).ready(function () {
-
     var url_string = window.location.href;
     var url = new URL(url_string);
     var load = url.searchParams.get("load");
@@ -9,158 +8,158 @@ jQuery(document).ready(function () {
         var json_object = {
             "name": "Rule_1538024258598",
             "set": [
-              {
-                "description": "Stack 1",
-                "section_id": "1538024164347",
-                "section_type": "sub",
-                "type": "condition",
-                "condition": {
-                  "condition": "AND",
-                  "rules": [
-                    {
-                      "id": "FIELD_4",
-                      "field": "FIELD_4",
-                      "type": "string",
-                      "input": "text",
-                      "operator": "equal",
-                      "value": 10
-                    },
-                    {
-                      "id": "FIELD_4",
-                      "field": "FIELD_4",
-                      "type": "string",
-                      "input": "text",
-                      "operator": "equal",
-                      "value": "11"
-                    }
-                  ],
-                  "valid": true
-                },
-                "if_yes": [
-                  {
-                    "description": "S 1.1",
-                    "section_id": "1538024199853",
+                {
+                    "description": "Stack 1",
+                    "section_id": "1538024164347",
                     "section_type": "sub",
                     "type": "condition",
                     "condition": {
-                      "condition": "AND",
-                      "rules": [
-                        {
-                          "id": "FIELD_4",
-                          "field": "FIELD_4",
-                          "type": "string",
-                          "input": "text",
-                          "operator": "equal",
-                          "value": "12"
-                        }
-                      ],
-                      "valid": true
+                        "condition": "AND",
+                        "rules": [
+                            {
+                                "id": "FIELD_4",
+                                "field": "FIELD_4",
+                                "type": "string",
+                                "input": "text",
+                                "operator": "equal",
+                                "value": 10
+                            },
+                            {
+                                "id": "FIELD_4",
+                                "field": "FIELD_4",
+                                "type": "string",
+                                "input": "text",
+                                "operator": "equal",
+                                "value": "11"
+                            }
+                        ],
+                        "valid": true
                     },
                     "if_yes": [
-                      {
-                        "description": "S 1.1.1",
-                        "section_id": "1538024223832",
-                        "section_type": "sub",
-                        "type": "action",
-                        "parent_elem_id": 1538024199853,
-                        "action_condtion": "yes",
-                        "action": {
-                          "action_type": "Show Form",
-                          "apply_to": "-1",
-                          "field": "FIELD_4",
-                          "action_value": ""
+                        {
+                            "description": "S 1.1",
+                            "section_id": "1538024199853",
+                            "section_type": "sub",
+                            "type": "condition",
+                            "condition": {
+                                "condition": "AND",
+                                "rules": [
+                                    {
+                                        "id": "FIELD_4",
+                                        "field": "FIELD_4",
+                                        "type": "string",
+                                        "input": "text",
+                                        "operator": "equal",
+                                        "value": "12"
+                                    }
+                                ],
+                                "valid": true
+                            },
+                            "if_yes": [
+                                {
+                                    "description": "S 1.1.1",
+                                    "section_id": "1538024223832",
+                                    "section_type": "sub",
+                                    "type": "action",
+                                    "parent_elem_id": 1538024199853,
+                                    "action_condtion": "yes",
+                                    "action": {
+                                        "action_type": "Show Form",
+                                        "apply_to": "-1",
+                                        "field": "FIELD_4",
+                                        "action_value": ""
+                                    }
+                                }
+                            ],
+                            "if_no": []
                         }
-                      }
                     ],
-                    "if_no": []
-                  }
-                ],
-                "if_no": [
-                  {
-                    "description": "S 1.2",
-                    "section_id": "1538024213203",
-                    "section_type": "sub",
+                    "if_no": [
+                        {
+                            "description": "S 1.2",
+                            "section_id": "1538024213203",
+                            "section_type": "sub",
+                            "type": "condition",
+                            "condition": {
+                                "condition": "AND",
+                                "rules": [
+                                    {
+                                        "id": "FIELD_4",
+                                        "field": "FIELD_4",
+                                        "type": "string",
+                                        "input": "text",
+                                        "operator": "equal",
+                                        "value": "13"
+                                    }
+                                ],
+                                "valid": true
+                            },
+                            "if_yes": [],
+                            "if_no": []
+                        }
+                    ]
+                },
+                {
+                    "description": "Stack 2",
+                    "section_id": "1538024155593",
+                    "section_type": "main",
                     "type": "condition",
                     "condition": {
-                      "condition": "AND",
-                      "rules": [
+                        "condition": "AND",
+                        "rules": [
+                            {
+                                "id": "FIELD_4",
+                                "field": "FIELD_4",
+                                "type": "string",
+                                "input": "text",
+                                "operator": "equal",
+                                "value": 10
+                            }
+                        ],
+                        "valid": true
+                    },
+                    "if_yes": [
                         {
-                          "id": "FIELD_4",
-                          "field": "FIELD_4",
-                          "type": "string",
-                          "input": "text",
-                          "operator": "equal",
-                          "value": "13"
+                            "description": "S 2.1",
+                            "section_id": "1538024240259",
+                            "section_type": "sub",
+                            "type": "action",
+                            "parent_elem_id": 1538024155593,
+                            "action_condtion": "yes",
+                            "action": {
+                                "action_type": "Hide Form",
+                                "apply_to": "-1",
+                                "field": "FIELD_4",
+                                "action_value": ""
+                            }
                         }
-                      ],
-                      "valid": true
+                    ],
+                    "if_no": []
+                },
+                {
+                    "description": "Stack 3",
+                    "section_id": "1538024184234",
+                    "section_type": "main",
+                    "type": "condition",
+                    "condition": {
+                        "condition": "AND",
+                        "rules": [
+                            {
+                                "id": "FIELD_4",
+                                "field": "FIELD_4",
+                                "type": "string",
+                                "input": "text",
+                                "operator": "equal",
+                                "value": 10
+                            }
+                        ],
+                        "valid": true
                     },
                     "if_yes": [],
                     "if_no": []
-                  }
-                ]
-              },
-              {
-                "description": "Stack 2",
-                "section_id": "1538024155593",
-                "section_type": "main",
-                "type": "condition",
-                "condition": {
-                  "condition": "AND",
-                  "rules": [
-                    {
-                      "id": "FIELD_4",
-                      "field": "FIELD_4",
-                      "type": "string",
-                      "input": "text",
-                      "operator": "equal",
-                      "value": 10
-                    }
-                  ],
-                  "valid": true
-                },
-                "if_yes": [
-                  {
-                    "description": "S 2.1",
-                    "section_id": "1538024240259",
-                    "section_type": "sub",
-                    "type": "action",
-                    "parent_elem_id": 1538024155593,
-                    "action_condtion": "yes",
-                    "action": {
-                      "action_type": "Hide Form",
-                      "apply_to": "-1",
-                      "field": "FIELD_4",
-                      "action_value": ""
-                    }
-                  }
-                ],
-                "if_no": []
-              },
-              {
-                "description": "Stack 3",
-                "section_id": "1538024184234",
-                "section_type": "main",
-                "type": "condition",
-                "condition": {
-                  "condition": "AND",
-                  "rules": [
-                    {
-                      "id": "FIELD_4",
-                      "field": "FIELD_4",
-                      "type": "string",
-                      "input": "text",
-                      "operator": "equal",
-                      "value": 10
-                    }
-                  ],
-                  "valid": true
-                },
-                "if_yes": [],
-                "if_no": []
-              }
+                }
             ]
-          }
+        }
 
         createLogicTree(json_object.set, '#container');
     }
@@ -192,19 +191,19 @@ jQuery(document).ready(function () {
         html += (section_type == 'main') ? 'sections"' : ' sub-sections"';
         html += ' ><div class="add-more-section" data-id="' + elem_id + '">';
         html += '<button type="button" data-id="' + elem_id + '" id="btn-add-more-section_' + elem_id + '" class="btn btn-default btn-add-more-section">';
-        html += '<span class="glyphicon glyphicon-plus-sign"></span></button><h1 class="down-arrow">&#x2193</h1></div>';
+        html += '<span class="glyphicon glyphicon-plus-sign"></span></button><button type="button" data-type="' + elem_id + '" data-id="' + elem_id + '" id="btn-add-more-section_' + elem_id + '" class="btn btn-default btn-add-more-section"><span class="glyphicon glyphicon-plus-sign"></span></button><h1 class="down-arrow">&#x2193</h1></div>';
         if (section_type != 'main') {
 
         }
         html += '<input class="form-control" id="input-description_' + elem_id + '" type="text" placeholder="Enter description">';
         html += '<div id = "builder_' + elem_id + '" class= "condition builder"';
-        html += '></div ><h1 class="down-arrow">&#x21e3</h1>' +
+        html += '></div ><h1 class="dashed-down-arrow">&#x21e3</h1>' +
             '<div class="container conditions-section" id="conditions-section_' + elem_id + '">' +
             '<div class="row-fluid">' +
             '<div class="yes-block" id="yes-block_' + elem_id + '">' +
             '<p class="p-yes"><i class="glyphicon glyphicon-ok"></i> If True</p>' +
-            '<div class="row-fluid"> <div class="col-md-5 action_select"  id="action_select_yes_' + elem_id + '"><select class="select_action" id="btn-sub-yes-select-action_' + elem_id + '"> <option value="">select action</option> <option value="condition">Condition</option><option value="action">Action</option></select>' +
-            '<button class="btn btn-outline-primary btn-sub-condtion" data-elem-id="' + elem_id + '" data-super-parent-elem-id="' + super_parent_elem_id + '" data-condition = "yes" id="btn-sub-yes-condition_' + elem_id + '">select</button>' +
+            '<div class="row-fluid"> <div class="action_select form-inline"  id="action_select_yes_' + elem_id + '"><select class="select_action form-control" id="btn-sub-yes-select-action_' + elem_id + '"> <option value="">select action</option> <option value="condition">Condition</option><option value="action">Action</option></select>&nbsp;' +
+            '<button class="btn btn-outline-primary btn-sub-condtion form-control" data-elem-id="' + elem_id + '" data-super-parent-elem-id="' + super_parent_elem_id + '" data-condition = "yes" id="btn-sub-yes-condition_' + elem_id + '">select</button>' +
             '</div>' +
             '<div class="col-md-5  add_more_actions_container hidden" id="add_more_actions_container_yes_' + elem_id + '">' +
             '<button type="button" class="btn btn-xs btn-success btn-add-action" data-elem-id="' + elem_id + '" data-condition = "yes" id="btn-add-action_yes_' + elem_id + '" data-add="rule"><i class="glyphicon glyphicon-plus"></i> Add action</button>' +
@@ -215,7 +214,7 @@ jQuery(document).ready(function () {
             '</div>' +
             '<div class="no-block" id="no-block_' + elem_id + '">' +
             '<p class="p-no"><i class="glyphicon glyphicon-remove"></i> If False</p>' +
-            '<div class="row-fluid"> <div class="col-md-5 action_select"  id="action_select_no_' + elem_id + '"><select class="select_action" id="btn-sub-no-select-action_' + elem_id + '"> <option value="">select action</option> <option value="condition">Condition</option><option value="action">Action</option></select><button class="btn btn-outline-primary btn-sub-condtion" data-elem-id="' + elem_id + '" data-condition = "no" id="btn-sub-no-condition_' + elem_id + '">select</button>' +
+            '<div class="row-fluid"> <div class="action_select form-inline"  id="action_select_no_' + elem_id + '"><select class="select_action form-control" id="btn-sub-no-select-action_' + elem_id + '"> <option value="">select action</option> <option value="condition">Condition</option><option value="action">Action</option></select>&nbsp;<button class="btn btn-outline-primary btn-sub-condtion form-control" data-elem-id="' + elem_id + '" data-condition = "no" id="btn-sub-no-condition_' + elem_id + '">select</button>' +
             '</div>' +
             '<div class="col-md-5 add_more_actions_container hidden" id="add_more_actions_container_no_' + elem_id + '">' +
             '<button type="button" class="btn btn-xs btn-success btn-add-action" data-elem-id="' + elem_id + '"  data-super-parent-elem-id="' + super_parent_elem_id + '" data-condition = "no" id="btn-add-action_no_' + elem_id + '" data-add="rule"><i class="glyphicon glyphicon-plus"></i> Add action</button>' +
@@ -634,18 +633,18 @@ jQuery(document).ready(function () {
     function buildConditionSectionsOnLoad(item, wrapper) {
         var html = '<div id="section_' + item.section_id + '" class="logics ';
         html += (item.section_type == 'main') ? 'sections"' : ' sub-sections"';
-        html += ' ><div class="add-more-section" data-id="' + item.section_id + '"><button type="button" data-type="' + item.section_type + '" data-id="' + item.section_id + '" id="btn-add-more-section_' + item.section_id + '" class="btn btn-default btn-add-more-section"><span class="glyphicon glyphicon-plus-sign"></span></button><h1 class="down-arrow">&#x2193</h1></div>';
+        html += ' ><div class="add-more-section" data-id="' + item.section_id + '"><button type="button" data-type="' + item.section_type + '" data-id="' + item.section_id + '" id="btn-add-more-section_' + item.section_id + '" class="btn btn-default btn-add-more-section"><span class="glyphicon glyphicon-plus-sign"></span></button><button type="button" data-type="' + item.section_type + '" data-id="' + item.section_id + '" id="btn-add-more-section_' + item.section_id + '" class="btn btn-default btn-add-more-section"><span class="glyphicon glyphicon-plus-sign"></span></button><h1 class="down-arrow">&#x2193</h1></div>';
         if (item.section_type != 'main') {
             html += '<input class="form-control" id="input-description_' + item.section_id + '" type="text" placeholder="Enter description">'
         }
         html += ' <div id = "builder_' + item.section_id + '" class= "condition builder"';
-        html += '></div ><h1 class="down-arrow">&#x21e3</h1>' +
+        html += '></div ><h1 class="dashed-down-arrow">&#x21e3</h1>' +
             '<div class="container conditions-section" id="conditions-section_' + item.section_id + '">' +
             '<div class="row-fluid">' +
             '<div class="yes-block" id="yes-block_' + item.section_id + '">' +
             '<p class="p-yes"><i class="glyphicon glyphicon-ok"></i> If True</p>' +
-            '<div class="row-fluid"> <div class="col-md-5 action_select"  id="action_select_yes_' + item.section_id + '"><select class="select_action" id="btn-sub-yes-select-action_' + item.section_id + '"> <option value="">select action</option> <option value="condition">Condition</option><option value="action">Action</option></select>' +
-            '<button class="btn btn-outline-primary btn-sub-condtion" data-elem-id="' + item.section_id + '" data-condition = "yes" id="btn-sub-yes-condition_' + item.section_id + '">select</button>' +
+            '<div class="row-fluid"> <div class="action_select form-inline"  id="action_select_yes_' + item.section_id + '"><select class="select_action form-control" id="btn-sub-yes-select-action_' + item.section_id + '"> <option value="">select action</option> <option value="condition">Condition</option><option value="action">Action</option></select>&nbsp;' +
+            '<button class="btn btn-outline-primary btn-sub-condtion form-control" data-elem-id="' + item.section_id + '" data-condition = "yes" id="btn-sub-yes-condition_' + item.section_id + '">select</button>' +
             '</div>' +
             '<div class="col-md-5  add_more_actions_container hidden" id="add_more_actions_container_yes_' + item.section_id + '">' +
             '<button type="button" class="btn btn-xs btn-success btn-add-action" data-elem-id="' + item.section_id + '" data-condition = "yes" id="btn-add-action_yes_' + item.section_id + '" data-add="rule"><i class="glyphicon glyphicon-plus"></i> Add action</button>' +
@@ -656,7 +655,7 @@ jQuery(document).ready(function () {
             '</div>' +
             '<div class="no-block" id="no-block_' + item.section_id + '">' +
             '<p class="p-no"><i class="glyphicon glyphicon-remove"></i> If False</p>' +
-            '<div class="row-fluid"> <div class="col-md-5 action_select"  id="action_select_no_' + item.section_id + '"><select class="select_action" id="btn-sub-no-select-action_' + item.section_id + '"> <option value="">select action</option> <option value="condition">Condition</option><option value="action">Action</option></select><button class="btn btn-outline-primary btn-sub-condtion" data-elem-id="' + item.section_id + '" data-condition = "no" id="btn-sub-no-condition_' + item.section_id + '">select</button>' +
+            '<div class="row-fluid"> <div class="action_select form-inline"  id="action_select_no_' + item.section_id + '"><select class="select_action form-control" id="btn-sub-no-select-action_' + item.section_id + '"> <option value="">select action</option> <option value="condition">Condition</option><option value="action">Action</option></select>&nbsp;<button class="btn btn-outline-primary btn-sub-condtion form-control" data-elem-id="' + item.section_id + '" data-condition = "no" id="btn-sub-no-condition_' + item.section_id + '">select</button>' +
             '</div>' +
             '<div class="col-md-5 add_more_actions_container hidden" id="add_more_actions_container_no_' + item.section_id + '">' +
             '<button type="button" class="btn btn-xs btn-success btn-add-action" data-elem-id="' + item.section_id + '"  data-condition = "no" id="btn-add-action_no_' + item.section_id + '" data-add="rule"><i class="glyphicon glyphicon-plus"></i> Add action</button>' +
@@ -829,7 +828,7 @@ jQuery(document).ready(function () {
     });
 
     $(document).on('click', '.remove-action', function () {
-        $(this).closest('.action-container').remove();
+        $(this).closest('.sub-sections').remove();
     });
 
     $(document).on('change', '.action-ctrl', function () {

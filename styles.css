@@ -13,6 +13,9 @@ p.p-yes {
     color: black;
     background-color: #00800033;
     text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    margin: -2px 0 10px;
 }
 
 .no-block {
@@ -26,6 +29,9 @@ p.p-no {
     background-color: #ac292580;
     text-align: left;
     padding-top: 2px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: -2px 0 10px;
 }
 
 .query-builder .rules-group-container {
@@ -65,6 +71,12 @@ p.p-no {
     margin-bottom: 2%;
 }
 
+.conditions-section>.row-fluid {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+}
+
 i.glyphicon-ok {
     background-color: #5cb85c;
     color: #ffff;
@@ -75,7 +87,7 @@ i.glyphicon-ok {
 i.glyphicon-remove {
     background-color: #ac2925;
     color: #ffff;
-    padding: 4px;
+    padding: 6px;
     top: 0%;
 }
 
@@ -185,9 +197,21 @@ i.glyphicon-remove {
     font-size: 50px;
 }
 
+.dashed-down-arrow {
+    text-align: center;
+    font-size: 50px;
+    color: #eee;
+}
+
 .btn.btn-danger .glyphicon-remove {
     background-color: transparent;
     color: #ac2925;
+}
+
+.add-more-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .add-more-section h1 {
@@ -195,15 +219,27 @@ i.glyphicon-remove {
 }
 
 .btn-add-more-section {
-    margin: 0 auto;
-    display: none;
+    /* margin: 0 auto; */
+    display: inline-block;
     opacity: 0;
 }
 
 .add-more-section:hover .btn-add-more-section {
-    display: block;
+    display: inline-block;
     opacity: 1;
 }
+
+.yes-block .row-fluid, .no-block .row-fluid {
+    padding-left: 1%;
+}
+
+/* select {
+    padding: 2px;
+}
+
+.btn-sub-condtion {
+    padding-top: 1px !important;
+} */
 
 /* .is-visible {
     display: block;
