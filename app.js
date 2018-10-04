@@ -7,102 +7,10 @@ jQuery(document).ready(function () {
 
     if (load == 'true') {
         var json_object = {
-            "name": "Rule_1538024258598",
+            "name": "Rule_1538624566942",
             "set": [
               {
-                "description": "Stack 1",
-                "section_id": "1538024164347",
-                "section_type": "sub",
-                "type": "condition",
-                "condition": {
-                  "condition": "AND",
-                  "rules": [
-                    {
-                      "id": "FIELD_4",
-                      "field": "FIELD_4",
-                      "type": "string",
-                      "input": "text",
-                      "operator": "equal",
-                      "value": 10
-                    },
-                    {
-                      "id": "FIELD_4",
-                      "field": "FIELD_4",
-                      "type": "string",
-                      "input": "text",
-                      "operator": "equal",
-                      "value": "11"
-                    }
-                  ],
-                  "valid": true
-                },
-                "if_yes": [
-                  {
-                    "description": "S 1.1",
-                    "section_id": "1538024199853",
-                    "section_type": "sub",
-                    "type": "condition",
-                    "condition": {
-                      "condition": "AND",
-                      "rules": [
-                        {
-                          "id": "FIELD_4",
-                          "field": "FIELD_4",
-                          "type": "string",
-                          "input": "text",
-                          "operator": "equal",
-                          "value": "12"
-                        }
-                      ],
-                      "valid": true
-                    },
-                    "if_yes": [
-                      {
-                        "description": "S 1.1.1",
-                        "section_id": "1538024223832",
-                        "section_type": "sub",
-                        "type": "action",
-                        "parent_elem_id": 1538024199853,
-                        "action_condtion": "yes",
-                        "action": {
-                          "action_type": "Show Form",
-                          "apply_to": "-1",
-                          "field": "FIELD_4",
-                          "action_value": ""
-                        }
-                      }
-                    ],
-                    "if_no": []
-                  }
-                ],
-                "if_no": [
-                  {
-                    "description": "S 1.2",
-                    "section_id": "1538024213203",
-                    "section_type": "sub",
-                    "type": "condition",
-                    "condition": {
-                      "condition": "AND",
-                      "rules": [
-                        {
-                          "id": "FIELD_4",
-                          "field": "FIELD_4",
-                          "type": "string",
-                          "input": "text",
-                          "operator": "equal",
-                          "value": "13"
-                        }
-                      ],
-                      "valid": true
-                    },
-                    "if_yes": [],
-                    "if_no": []
-                  }
-                ]
-              },
-              {
-                "description": "Stack 2",
-                "section_id": "1538024155593",
+                "section_id": "1538624375695",
                 "section_type": "main",
                 "type": "condition",
                 "condition": {
@@ -121,43 +29,118 @@ jQuery(document).ready(function () {
                 },
                 "if_yes": [
                   {
-                    "description": "S 2.1",
-                    "section_id": "1538024240259",
+                    "description": "S1.1",
+                    "section_id": "1538624389693",
                     "section_type": "sub",
                     "type": "action",
-                    "parent_elem_id": 1538024155593,
+                    "parent_elem_id": 1538624375695,
                     "action_condtion": "yes",
                     "action": {
-                      "action_type": "Hide Form",
+                      "action_type": "Show",
+                      "apply_to": "Current Repeat",
+                      "field": "FIELD_4",
+                      "action_value": ""
+                    }
+                  },
+                  {
+                    "description": "S1.2",
+                    "section_id": "1538624402157",
+                    "section_type": "sub",
+                    "type": "action",
+                    "parent_elem_id": 1538624375695,
+                    "action_condtion": "yes",
+                    "action": {
+                      "action_type": "Show Form",
                       "apply_to": "-1",
                       "field": "FIELD_4",
                       "action_value": ""
                     }
                   }
                 ],
-                "if_no": []
-              },
-              {
-                "description": "Stack 3",
-                "section_id": "1538024184234",
-                "section_type": "main",
-                "type": "condition",
-                "condition": {
-                  "condition": "AND",
-                  "rules": [
-                    {
-                      "id": "FIELD_4",
-                      "field": "FIELD_4",
-                      "type": "string",
-                      "input": "text",
-                      "operator": "equal",
-                      "value": 10
-                    }
-                  ],
-                  "valid": true
-                },
-                "if_yes": [],
-                "if_no": []
+                "if_no": [
+                  {
+                    "description": "S 2",
+                    "section_id": "1538624412954",
+                    "section_type": "sub",
+                    "type": "condition",
+                    "condition": {
+                      "condition": "AND",
+                      "rules": [
+                        {
+                          "id": "FIELD_4",
+                          "field": "FIELD_4",
+                          "type": "string",
+                          "input": "text",
+                          "operator": "equal",
+                          "value": "11"
+                        }
+                      ],
+                      "valid": true
+                    },
+                    "if_yes": [
+                      {
+                        "description": "",
+                        "section_id": "1538624473363",
+                        "section_type": "sub",
+                        "type": "condition",
+                        "condition": {
+                          "condition": "AND",
+                          "rules": [
+                            {
+                              "id": "FIELD_4",
+                              "field": "FIELD_4",
+                              "type": "string",
+                              "input": "text",
+                              "operator": "equal",
+                              "value": "11"
+                            }
+                          ],
+                          "valid": true
+                        },
+                        "if_yes": [],
+                        "if_no": []
+                      },
+                      {
+                        "description": "s 2.1",
+                        "section_id": "1538624442246",
+                        "section_type": "sub",
+                        "type": "condition",
+                        "condition": {
+                          "condition": "AND",
+                          "rules": [
+                            {
+                              "id": "FIELD_4",
+                              "field": "FIELD_4",
+                              "type": "string",
+                              "input": "text",
+                              "operator": "equal",
+                              "value": "12"
+                            }
+                          ],
+                          "valid": true
+                        },
+                        "if_yes": [],
+                        "if_no": []
+                      }
+                    ],
+                    "if_no": [
+                      {
+                        "description": "s 2.2",
+                        "section_id": "1538624456821",
+                        "section_type": "sub",
+                        "type": "action",
+                        "parent_elem_id": 1538624412954,
+                        "action_condtion": "no",
+                        "action": {
+                          "action_type": "Show (don\"t toggle)",
+                          "apply_to": "Current Repeat",
+                          "field": "FIELD_4",
+                          "action_value": ""
+                        }
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -190,21 +173,23 @@ jQuery(document).ready(function () {
         console.log(section_type)
         var html = '<div id="section_' + elem_id + '" class="logics ';
         html += (section_type == 'main') ? 'sections"' : ' sub-sections"';
-        html += ' ><div class="add-more-section" data-id="' + elem_id + '">';
-        html += '<button type="button" data-id="' + elem_id + '" id="btn-add-more-section_' + elem_id + '" class="btn btn-default btn-add-more-section">';
+        html += ' ><a class="close-thik" data-type="condition"></a><div class="add-more-section" data-id="' + elem_id + '">';
+        html += '<button type="button" data-id="' + elem_id + '" data-type="' + section_type + '" id="btn-add-more-section_' + elem_id + '" class="btn btn-default btn-add-more-section">';
         html += '<span class="glyphicon glyphicon-plus-sign"></span></button><h1 class="down-arrow">&#x2193</h1></div>';
         if (section_type != 'main') {
 
         }
         html += '<input class="form-control" id="input-description_' + elem_id + '" type="text" placeholder="Enter description">';
         html += '<div id = "builder_' + elem_id + '" class= "condition builder"';
-        html += '></div ><h1 class="down-arrow">&#x21e3</h1>' +
+        html += '></div ><h1 class="dash-down-arrow">&#x21e3</h1>' +
             '<div class="container conditions-section" id="conditions-section_' + elem_id + '">' +
             '<div class="row-fluid">' +
             '<div class="yes-block" id="yes-block_' + elem_id + '">' +
             '<p class="p-yes"><i class="glyphicon glyphicon-ok"></i> If True</p>' +
-            '<div class="row-fluid"> <div class="col-md-5 action_select"  id="action_select_yes_' + elem_id + '"><select class="select_action" id="btn-sub-yes-select-action_' + elem_id + '"> <option value="">select action</option> <option value="condition">Condition</option><option value="action">Action</option></select>' +
-            '<button class="btn btn-outline-primary btn-sub-condtion" data-elem-id="' + elem_id + '" data-super-parent-elem-id="' + super_parent_elem_id + '" data-condition = "yes" id="btn-sub-yes-condition_' + elem_id + '">select</button>' +
+            '<div class="row-fluid">' +
+            '<div class="col-md-5 action_select"  id="action_select_yes_' + elem_id + '">' +
+            '<button class="btn btn-outline-primary btn-sub-condtion" data-value= "action" data-elem-id="' + elem_id + '" data-super-parent-elem-id="' + super_parent_elem_id + '" data-condition = "yes" id="btn-sub-yes-action_' + elem_id + '">+ Action</button>' +
+            '<button class="btn btn-outline-primary btn-sub-condtion" data-value= "condition" data-elem-id="' + elem_id + '" data-super-parent-elem-id="' + super_parent_elem_id + '" data-condition = "yes" id="btn-sub-yes-condition_' + elem_id + '">+ Condition</button>' +
             '</div>' +
             '<div class="col-md-5  add_more_actions_container hidden" id="add_more_actions_container_yes_' + elem_id + '">' +
             '<button type="button" class="btn btn-xs btn-success btn-add-action" data-elem-id="' + elem_id + '" data-condition = "yes" id="btn-add-action_yes_' + elem_id + '" data-add="rule"><i class="glyphicon glyphicon-plus"></i> Add action</button>' +
@@ -215,7 +200,10 @@ jQuery(document).ready(function () {
             '</div>' +
             '<div class="no-block" id="no-block_' + elem_id + '">' +
             '<p class="p-no"><i class="glyphicon glyphicon-remove"></i> If False</p>' +
-            '<div class="row-fluid"> <div class="col-md-5 action_select"  id="action_select_no_' + elem_id + '"><select class="select_action" id="btn-sub-no-select-action_' + elem_id + '"> <option value="">select action</option> <option value="condition">Condition</option><option value="action">Action</option></select><button class="btn btn-outline-primary btn-sub-condtion" data-elem-id="' + elem_id + '" data-condition = "no" id="btn-sub-no-condition_' + elem_id + '">select</button>' +
+            '<div class="row-fluid">' +
+            '<div class="col-md-5 action_select"  id="action_select_no_' + elem_id + '">' +
+            '<button class="btn btn-outline-primary btn-sub-condtion" data-value= "action" data-elem-id="' + elem_id + '" data-condition = "no" id="btn-sub-no-action_' + elem_id + '">+ Action</button>' +
+            '<button class="btn btn-outline-primary btn-sub-condtion" data-value= "condition" data-elem-id="' + elem_id + '"  data-condition = "no" id="btn-sub-no-condition_' + elem_id + '">+ Condition</button>' +
             '</div>' +
             '<div class="col-md-5 add_more_actions_container hidden" id="add_more_actions_container_no_' + elem_id + '">' +
             '<button type="button" class="btn btn-xs btn-success btn-add-action" data-elem-id="' + elem_id + '"  data-super-parent-elem-id="' + super_parent_elem_id + '" data-condition = "no" id="btn-add-action_no_' + elem_id + '" data-add="rule"><i class="glyphicon glyphicon-plus"></i> Add action</button>' +
@@ -226,7 +214,7 @@ jQuery(document).ready(function () {
             '</div>' +
             '</div>' +
             '</div>' +
-            '</div><hr>';
+            '</div>';
 
 
         (type == 'more') ? $(html).insertBefore(selector) : $(selector).append(html);
@@ -249,7 +237,7 @@ jQuery(document).ready(function () {
     function createActionSection(elem_id, section_type, selector, parent_elem_id) {
         var html = '<div id="section_' + elem_id + '" data-parent-id="' + parent_elem_id + '" class="logics ';
         html += (section_type == 'main') ? 'sections"' : ' sub-sections"';
-        html += ' >';
+        html += ' ><a class="close-thik" data-type="action"></a>';
         if (section_type != 'main') {
             html += '<input class="form-control" id="input-description_' + elem_id + '" type="text" placeholder="Enter description">'
         }
@@ -268,11 +256,6 @@ jQuery(document).ready(function () {
         var html = '<div class="rules-group-body action-container" id="action_container_' + elem_id + '">' +
             '<div class="rules-list">' +
             '<div id="action_builder_' + elem_id + '_rule" class="rule-container">' +
-            '<div class="rule-header">' +
-            '<div class="btn-group pull-right rule-actions" > <button type="button" class="btn btn-xs btn-danger remove-action" data-delete="rule" data-elem-id="' + elem_id + '">' +
-            '<i class="glyphicon glyphicon-remove"></i>' +
-            '</button> </div >' +
-            '</div >' +
             '<div class="rule-operator-container">' +
             '<select class="form-control action-ctrl" id="action_builder_rule_operator_' + elem_id + '">' +
             '<option value = "-1">Select action</option>' +
@@ -564,11 +547,6 @@ jQuery(document).ready(function () {
         var html = '<div class="rules-group-body action-container" id="action_container_' + elem_id + '">' +
             '<div class="rules-list">' +
             '<div id="action_builder_' + elem_id + '_rule" class="rule-container">' +
-            '<div class="rule-header">' +
-            '<div class="btn-group pull-right rule-actions" > <button type="button" class="btn btn-xs btn-danger remove-action" data-delete="rule" data-elem-id="' + elem_id + '">' +
-            '<i class="glyphicon glyphicon-remove"></i>' +
-            '</button> </div >' +
-            '</div >' +
             '<div class="rule-operator-container">' +
             '<select class="form-control action-ctrl" id="action_builder_rule_operator_' + elem_id + '">' +
             '<option value = "-1">Select action</option>' +
@@ -634,18 +612,20 @@ jQuery(document).ready(function () {
     function buildConditionSectionsOnLoad(item, wrapper) {
         var html = '<div id="section_' + item.section_id + '" class="logics ';
         html += (item.section_type == 'main') ? 'sections"' : ' sub-sections"';
-        html += ' ><div class="add-more-section" data-id="' + item.section_id + '"><button type="button" data-type="' + item.section_type + '" data-id="' + item.section_id + '" id="btn-add-more-section_' + item.section_id + '" class="btn btn-default btn-add-more-section"><span class="glyphicon glyphicon-plus-sign"></span></button><h1 class="down-arrow">&#x2193</h1></div>';
+        html += ' ><a class="close-thik" data-type="condition"></a><div class="add-more-section" data-id="' + item.section_id + '"><button type="button" data-type="' + item.section_type + '" data-id="' + item.section_id + '" id="btn-add-more-section_' + item.section_id + '" class="btn btn-default btn-add-more-section"><span class="glyphicon glyphicon-plus-sign"></span></button><h1 class="down-arrow">&#x2193</h1></div>';
         if (item.section_type != 'main') {
             html += '<input class="form-control" id="input-description_' + item.section_id + '" type="text" placeholder="Enter description">'
         }
         html += ' <div id = "builder_' + item.section_id + '" class= "condition builder"';
-        html += '></div ><h1 class="down-arrow">&#x21e3</h1>' +
+        html += '></div ><h1 class="dash-down-arrow">&#x21e3</h1>' +
             '<div class="container conditions-section" id="conditions-section_' + item.section_id + '">' +
             '<div class="row-fluid">' +
             '<div class="yes-block" id="yes-block_' + item.section_id + '">' +
             '<p class="p-yes"><i class="glyphicon glyphicon-ok"></i> If True</p>' +
-            '<div class="row-fluid"> <div class="col-md-5 action_select"  id="action_select_yes_' + item.section_id + '"><select class="select_action" id="btn-sub-yes-select-action_' + item.section_id + '"> <option value="">select action</option> <option value="condition">Condition</option><option value="action">Action</option></select>' +
-            '<button class="btn btn-outline-primary btn-sub-condtion" data-elem-id="' + item.section_id + '" data-condition = "yes" id="btn-sub-yes-condition_' + item.section_id + '">select</button>' +
+            '<div class="row-fluid">' +
+            '<div class="col-md-5 action_select"  id="action_select_yes_' + item.section_id + '">' +
+            '<button class="btn btn-outline-primary btn-sub-condtion" data-value= "action" data-elem-id="' + item.section_id + '"  data-condition = "yes" id="btn-sub-yes-action_' + item.section_id + '">+ Action</button>' +
+            '<button class="btn btn-outline-primary btn-sub-condtion" data-value= "condition" data-elem-id="' + item.section_id + '"  data-condition = "yes" id="btn-sub-yes-condition_' + item.section_id + '">+ Condition</button>' +
             '</div>' +
             '<div class="col-md-5  add_more_actions_container hidden" id="add_more_actions_container_yes_' + item.section_id + '">' +
             '<button type="button" class="btn btn-xs btn-success btn-add-action" data-elem-id="' + item.section_id + '" data-condition = "yes" id="btn-add-action_yes_' + item.section_id + '" data-add="rule"><i class="glyphicon glyphicon-plus"></i> Add action</button>' +
@@ -656,7 +636,10 @@ jQuery(document).ready(function () {
             '</div>' +
             '<div class="no-block" id="no-block_' + item.section_id + '">' +
             '<p class="p-no"><i class="glyphicon glyphicon-remove"></i> If False</p>' +
-            '<div class="row-fluid"> <div class="col-md-5 action_select"  id="action_select_no_' + item.section_id + '"><select class="select_action" id="btn-sub-no-select-action_' + item.section_id + '"> <option value="">select action</option> <option value="condition">Condition</option><option value="action">Action</option></select><button class="btn btn-outline-primary btn-sub-condtion" data-elem-id="' + item.section_id + '" data-condition = "no" id="btn-sub-no-condition_' + item.section_id + '">select</button>' +
+            '<div class="row-fluid">' +
+            '<div class="col-md-5 action_select"  id="action_select_no_' + item.section_id + '">' +
+            '<button class="btn btn-outline-primary btn-sub-condtion" data-value= "action" data-elem-id="' + item.section_id + '"  data-condition = "no" id="btn-sub-no-action_' + item.section_id + '">+ Action</button>' +
+            '<button class="btn btn-outline-primary btn-sub-condtion" data-value= "condition" data-elem-id="' + item.section_id + '" data-condition = "no" id="btn-sub-no-condition_' + item.section_id + '">+ Condition</button>' +
             '</div>' +
             '<div class="col-md-5 add_more_actions_container hidden" id="add_more_actions_container_no_' + item.section_id + '">' +
             '<button type="button" class="btn btn-xs btn-success btn-add-action" data-elem-id="' + item.section_id + '"  data-condition = "no" id="btn-add-action_no_' + item.section_id + '" data-add="rule"><i class="glyphicon glyphicon-plus"></i> Add action</button>' +
@@ -667,7 +650,7 @@ jQuery(document).ready(function () {
             '</div>' +
             '</div>' +
             '</div>' +
-            '</div><hr>';
+            '</div>';
 
         $(wrapper).append(html);
         $('#input-description_' + item.section_id).val(item.description);
@@ -691,7 +674,7 @@ jQuery(document).ready(function () {
     function createActionSectionLoad(elem_id, section_type, selector, parent_elem_id, description) {
         var html = '<div id="section_' + elem_id + '" data-parent-id="' + parent_elem_id + '" class="logics ';
         html += (section_type == 'main') ? 'sections"' : ' sub-sections"';
-        html += ' >';
+        html += ' ><a  class="close-thik" data-type="action"></a>';
         if (section_type != 'main') {
             html += '<input class="form-control" id="input-description_' + elem_id + '" type="text" placeholder="Enter description">'
         }
@@ -750,7 +733,8 @@ jQuery(document).ready(function () {
         var parent_elem_id = $(this).data('elem-id');
         var is_condition = $(this).data('condition');
         var elem_id = Math.round(new Date().getTime() + (Math.random() * 100));
-        var select_yes_no = (is_condition === 'yes') ? $('#btn-sub-yes-select-action_' + parent_elem_id).val() : $('#btn-sub-no-select-action_' + parent_elem_id).val();
+        // var select_yes_no = (is_condition === 'yes') ? $('#btn-sub-yes-select-action_' + parent_elem_id).val() : $('#btn-sub-no-select-action_' + parent_elem_id).val();
+        var select_yes_no = $(this).data('value');
         var action_type = (select_yes_no == 'condition') ? 'condition' : (select_yes_no == 'action') ? 'action' : '';
         var wrapper = (is_condition === 'yes') ? '#sub-yes_' + parent_elem_id : '#sub-no_' + parent_elem_id;
 
@@ -846,23 +830,26 @@ jQuery(document).ready(function () {
     });
 
 
-    // $(".add-more-section").on({
-    //     mouseenter: function () {
-    //         var id = $(this).data('id');
-    //         $('#btn-add-more-section_' + id).addClass('is-visible');
+    $(document).on('click', '.close-thik', function (e) {
+        e.preventDefault();
+        var type = $(this).data('type');
+        var parent_elem_id = $(this).parent('.logics').data('parent-id');
+        var parent_sub_logic = $(this).parent('.logics').parent('.sub-logic');
+        var no_of_actions = parent_sub_logic.hasClass('sub-yes') ? $('#sub-yes_' + parent_elem_id).children('.logics').length : $('#sub-no_' + parent_elem_id).children('.logics').length;
+        var action_select = parent_sub_logic.hasClass('sub-yes') ? '#action_select_yes_' + parent_elem_id : '#action_select_no_' + parent_elem_id;
+        var action_container = parent_sub_logic.hasClass('sub-yes') ? '#add_more_actions_container_yes_' + parent_elem_id : '#add_more_actions_container_no_' + parent_elem_id;
+        if (no_of_actions == 1 && type == "action") {
+            $(action_select).removeClass('hidden');
+            $(action_container).addClass('hidden');
+            parent_sub_logic.html('');
+        }
 
-    //         setTimeout(function () {
-    //             $('#btn-add-more-section_' + id).addClass('is-open');
-    //         }, 20);
-    //     },
-    //     mouseleave: function () {
-    //         var id = $(this).data('id');
-    //         $('#btn-add-more-section_' + id).removeClass('is-open');
+        $(this).closest('.logics').remove();
+    });
 
-    //         $('#btn-add-more-section_' + id).one('transitionend', function (e) {
-    //             $('#btn-add-more-section_' + id).removeClass('is-visible');
-    //         });
-    //     }
-    // });
+    $(document).on('click', '.btn', function (e) {
+        $(".btn-danger").contents().filter(function () { return this.nodeType == 3; }).remove();
+    });
+
 
 });

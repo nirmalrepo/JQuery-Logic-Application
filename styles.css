@@ -1,3 +1,10 @@
+body {
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+
 .initial-hide {
     display: none;
 }
@@ -13,6 +20,8 @@ p.p-yes {
     color: black;
     background-color: #00800033;
     text-align: left;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .no-block {
@@ -25,7 +34,8 @@ p.p-no {
     color: black;
     background-color: #ac292580;
     text-align: left;
-    padding-top: 2px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .query-builder .rules-group-container {
@@ -75,7 +85,7 @@ i.glyphicon-ok {
 i.glyphicon-remove {
     background-color: #ac2925;
     color: #ffff;
-    padding: 4px;
+    padding: 6px;
     top: 0%;
 }
 
@@ -142,10 +152,6 @@ i.glyphicon-remove {
     display: table-cell;
 }
 
-#container {
-    overflow-x: auto;
-    white-space: nowrap;
-}
 
 .conditions-section {
     width: 100%;
@@ -159,7 +165,6 @@ i.glyphicon-remove {
 }
 
 .sections>.condition {
-    /* width: 50%; */
     margin: 0 auto;
 }
 
@@ -185,6 +190,12 @@ i.glyphicon-remove {
     font-size: 50px;
 }
 
+.dash-down-arrow {
+    text-align: center;
+    font-size: 50px;
+    color: #bababa;
+}
+
 .btn.btn-danger .glyphicon-remove {
     background-color: transparent;
     color: #ac2925;
@@ -205,10 +216,58 @@ i.glyphicon-remove {
     opacity: 1;
 }
 
-/* .is-visible {
-    display: block;
+.sections {
+    position: relative;
+    border: 1px solid #8ec1f8;
+    padding: 10px;
+    margin-top: 3%;
+    margin-bottom: 3%;
 }
 
-.is-open {
-    opacity: 1;
-} */
+.sub-sections {
+    position: relative;
+    border: 1px solid #eee;
+    padding: 10px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+[class*="close-"] {
+    color: #ac2925;
+    font: 13px/100% arial, sans-serif;
+    position: absolute;
+    right: -13px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #fff;
+    top: -13px;
+    border: 1px solid #ac2925;
+    padding: 5px;
+    border-radius: 50%;
+    font-weight: bold;
+    padding-bottom: 3px;
+    padding-top: 4px;
+}
+
+.close-thik::after {
+    content: '✖';
+}
+
+[class*="close-"]:hover {
+    color: #ac2925;
+    text-decoration: none;
+}
+
+.action_select button {
+    border: none;
+    font-size: 18px;
+}
+
+.action_select button:hover {
+    color: #333;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.action_select button:nth-child(1) {
+    border-right: 1px solid;
+}
