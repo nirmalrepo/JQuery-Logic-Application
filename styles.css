@@ -152,7 +152,6 @@ i.glyphicon-remove {
     display: table-cell;
 }
 
-
 .conditions-section {
     width: 100%;
     padding: 0px;
@@ -270,4 +269,8 @@ i.glyphicon-remove {
 
 .action_select button:nth-child(1) {
     border-right: 1px solid;
+}
+
+.input-description {
+    display: none;
 }
