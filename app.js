@@ -9,11 +9,11 @@ jQuery(document).ready(function () {
 
         if (id == '1') {
             var json_object = {
-                "name": "Rule_1538976735174",
+                "name": "Rule_1539225176436",
                 "set": [
                     {
-                        "description": "Rule One",
-                        "section_id": "1538976683428",
+                        "description": "",
+                        "section_id": "1539225036380",
                         "section_type": "main",
                         "type": "condition",
                         "condition": {
@@ -26,95 +26,6 @@ jQuery(document).ready(function () {
                                     "input": "text",
                                     "operator": "equal",
                                     "value": 10
-                                }
-                            ],
-                            "valid": true
-                        },
-                        "if_yes": [
-                            {
-                                "description": "Test",
-                                "section_id": "1538976690603",
-                                "section_type": "sub",
-                                "type": "action",
-                                "parent_elem_id": 1538976683428,
-                                "action_condtion": "yes",
-                                "action": {
-                                    "action_type": "Show",
-                                    "apply_to": "Entire Form",
-                                    "field": "FIELD_4",
-                                    "action_value": ""
-                                }
-                            }
-                        ],
-                        "if_no": [
-                            {
-                                "description": "Test 2",
-                                "section_id": "1538976702943",
-                                "section_type": "sub",
-                                "type": "condition",
-                                "condition": {
-                                    "condition": "AND",
-                                    "rules": [
-                                        {
-                                            "id": "FIELD_4",
-                                            "field": "FIELD_4",
-                                            "type": "string",
-                                            "input": "text",
-                                            "operator": "equal",
-                                            "value": 10
-                                        },
-                                        {
-                                            "id": "FIELD_5",
-                                            "field": "FIELD_5",
-                                            "type": "integer",
-                                            "input": "select",
-                                            "operator": "equal",
-                                            "value": 1
-                                        }
-                                    ],
-                                    "valid": true
-                                },
-                                "if_yes": [
-                                    {
-                                        "description": "Test 3",
-                                        "section_id": "1538976715384",
-                                        "section_type": "sub",
-                                        "type": "action",
-                                        "parent_elem_id": 1538976702943,
-                                        "action_condtion": "yes",
-                                        "action": {
-                                            "action_type": "Hide Form",
-                                            "apply_to": "-1",
-                                            "field": "FIELD_4",
-                                            "action_value": ""
-                                        }
-                                    }
-                                ],
-                                "if_no": []
-                            }
-                        ]
-                    }
-                ]
-            }
-        } else {
-            json_object = {
-                "name": "Rule_1538976885979",
-                "set": [
-                    {
-                        "description": "Rule Two",
-                        "section_id": "1538976832055",
-                        "section_type": "main",
-                        "type": "condition",
-                        "condition": {
-                            "condition": "AND",
-                            "rules": [
-                                {
-                                    "id": "FIELD_4",
-                                    "field": "FIELD_4",
-                                    "type": "string",
-                                    "input": "text",
-                                    "operator": "equal",
-                                    "value": "11"
                                 },
                                 {
                                     "id": "FIELD_5",
@@ -123,22 +34,14 @@ jQuery(document).ready(function () {
                                     "input": "select",
                                     "operator": "equal",
                                     "value": 1
-                                },
-                                {
-                                    "id": "FIELD_6",
-                                    "field": "FIELD_6",
-                                    "type": "integer",
-                                    "input": "radio",
-                                    "operator": "equal",
-                                    "value": 1
                                 }
                             ],
                             "valid": true
                         },
                         "if_yes": [
                             {
-                                "description": "Test",
-                                "section_id": "1538976853334",
+                                "description": "",
+                                "section_id": "1539225053710",
                                 "section_type": "sub",
                                 "type": "condition",
                                 "condition": {
@@ -150,31 +53,15 @@ jQuery(document).ready(function () {
                                             "type": "string",
                                             "input": "text",
                                             "operator": "equal",
-                                            "value": 10
+                                            "value": "11"
                                         }
                                     ],
                                     "valid": true
                                 },
                                 "if_yes": [
                                     {
-                                        "description": "Test",
-                                        "section_id": "1538976860151",
-                                        "section_type": "sub",
-                                        "type": "action",
-                                        "parent_elem_id": 1538976853334,
-                                        "action_condtion": "yes",
-                                        "action": {
-                                            "action_type": "Disable",
-                                            "apply_to": "Entire Form",
-                                            "field": "FIELD_4",
-                                            "action_value": ""
-                                        }
-                                    }
-                                ],
-                                "if_no": [
-                                    {
-                                        "description": "Test",
-                                        "section_id": "1538976871267",
+                                        "description": "",
+                                        "section_id": "1539225064817",
                                         "section_type": "sub",
                                         "type": "condition",
                                         "condition": {
@@ -186,36 +73,307 @@ jQuery(document).ready(function () {
                                                     "type": "string",
                                                     "input": "text",
                                                     "operator": "equal",
-                                                    "value": 10
+                                                    "value": "13"
                                                 }
                                             ],
                                             "valid": true
                                         },
                                         "if_yes": [
                                             {
-                                                "description": "Tesr",
-                                                "section_id": "1538976875287",
+                                                "description": "",
+                                                "section_id": "1539225149880",
                                                 "section_type": "sub",
                                                 "type": "action",
-                                                "parent_elem_id": 1538976871267,
+                                                "parent_elem_id": 1539225064817,
                                                 "action_condtion": "yes",
                                                 "action": {
-                                                    "action_type": "Hide (don\"t toggle)",
-                                                    "apply_to": "Current Repeat",
-                                                    "field": "FIELD_4",
+                                                    "action_type": "Show (don\"t toggle)",
+                                                    "apply_to": "Entire Form",
+                                                    "field": "FIELD_5",
                                                     "action_value": ""
                                                 }
                                             }
                                         ],
-                                        "if_no": []
+                                        "if_no": [
+                                            {
+                                                "description": "",
+                                                "section_id": "1539225159243",
+                                                "section_type": "sub",
+                                                "type": "action",
+                                                "parent_elem_id": 1539225064817,
+                                                "action_condtion": "no",
+                                                "action": {
+                                                    "action_type": "Set Document Template",
+                                                    "apply_to": "-1",
+                                                    "field": "-1",
+                                                    "action_value": "trt"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "if_no": [
+                                    {
+                                        "description": "",
+                                        "section_id": "1539225069445",
+                                        "section_type": "sub",
+                                        "type": "condition",
+                                        "condition": {
+                                            "condition": "AND",
+                                            "rules": [
+                                                {
+                                                    "id": "FIELD_4",
+                                                    "field": "FIELD_4",
+                                                    "type": "string",
+                                                    "input": "text",
+                                                    "operator": "equal",
+                                                    "value": "14"
+                                                }
+                                            ],
+                                            "valid": true
+                                        },
+                                        "if_yes": [
+                                            {
+                                                "description": "",
+                                                "section_id": "1539225126294",
+                                                "section_type": "sub",
+                                                "type": "action",
+                                                "parent_elem_id": 1539225069445,
+                                                "action_condtion": "yes",
+                                                "action": {
+                                                    "action_type": "Enable",
+                                                    "apply_to": "Current Repeat",
+                                                    "field": "FIELD_5",
+                                                    "action_value": ""
+                                                }
+                                            }
+                                        ],
+                                        "if_no": [
+                                            {
+                                                "description": "",
+                                                "section_id": "1539225137969",
+                                                "section_type": "sub",
+                                                "type": "action",
+                                                "parent_elem_id": 1539225069445,
+                                                "action_condtion": "no",
+                                                "action": {
+                                                    "action_type": "Hide Form",
+                                                    "apply_to": "-1",
+                                                    "field": "FIELD_6",
+                                                    "action_value": ""
+                                                }
+                                            }
+                                        ]
                                     }
                                 ]
                             }
                         ],
-                        "if_no": []
+                        "if_no": [
+                            {
+                                "description": "",
+                                "section_id": "1539225059033",
+                                "section_type": "sub",
+                                "type": "condition",
+                                "condition": {
+                                    "condition": "AND",
+                                    "rules": [
+                                        {
+                                            "id": "FIELD_4",
+                                            "field": "FIELD_4",
+                                            "type": "string",
+                                            "input": "text",
+                                            "operator": "equal",
+                                            "value": "12"
+                                        }
+                                    ],
+                                    "valid": true
+                                },
+                                "if_yes": [
+                                    {
+                                        "description": "",
+                                        "section_id": "1539225078946",
+                                        "section_type": "sub",
+                                        "type": "action",
+                                        "parent_elem_id": 1539225059033,
+                                        "action_condtion": "yes",
+                                        "action": {
+                                            "action_type": "Show Form",
+                                            "apply_to": "-1",
+                                            "field": "FIELD_5",
+                                            "action_value": ""
+                                        }
+                                    }
+                                ],
+                                "if_no": [
+                                    {
+                                        "description": "",
+                                        "section_id": "1539225087755",
+                                        "section_type": "sub",
+                                        "type": "condition",
+                                        "condition": {
+                                            "condition": "AND",
+                                            "rules": [
+                                                {
+                                                    "id": "FIELD_4",
+                                                    "field": "FIELD_4",
+                                                    "type": "string",
+                                                    "input": "text",
+                                                    "operator": "equal",
+                                                    "value": "15"
+                                                }
+                                            ],
+                                            "valid": true
+                                        },
+                                        "if_yes": [
+                                            {
+                                                "description": "",
+                                                "section_id": "1539225098186",
+                                                "section_type": "sub",
+                                                "type": "action",
+                                                "parent_elem_id": 1539225087755,
+                                                "action_condtion": "yes",
+                                                "action": {
+                                                    "action_type": "Show Message Box",
+                                                    "apply_to": "-1",
+                                                    "field": "-1",
+                                                    "action_value": "hey"
+                                                }
+                                            }
+                                        ],
+                                        "if_no": [
+                                            {
+                                                "description": "",
+                                                "section_id": "1539225108917",
+                                                "section_type": "sub",
+                                                "type": "action",
+                                                "parent_elem_id": 1539225087755,
+                                                "action_condtion": "no",
+                                                "action": {
+                                                    "action_type": "Show Form",
+                                                    "apply_to": "-1",
+                                                    "field": "FIELD_5",
+                                                    "action_value": ""
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             }
+        } else {
+            json_object = {
+                "name": "Rule_1539231388004",
+                "set": [
+                  {
+                    "description": "Rule 1",
+                    "section_id": "1539231032353",
+                    "section_type": "main",
+                    "type": "condition",
+                    "condition": {
+                      "condition": "AND",
+                      "rules": [
+                        {
+                          "id": "FIELD_4",
+                          "field": "FIELD_4",
+                          "type": "string",
+                          "input": "text",
+                          "operator": "equal",
+                          "value": 10
+                        }
+                      ],
+                      "valid": true
+                    },
+                    "if_yes": [
+                      {
+                        "description": "",
+                        "section_id": "1539231064041",
+                        "section_type": "sub",
+                        "type": "condition",
+                        "condition": {
+                          "condition": "AND",
+                          "rules": [
+                            {
+                              "id": "FIELD_4",
+                              "field": "FIELD_4",
+                              "type": "string",
+                              "input": "text",
+                              "operator": "equal",
+                              "value": "11"
+                            }
+                          ],
+                          "valid": true
+                        },
+                        "if_yes": [
+                          {
+                            "description": "",
+                            "section_id": "1539231075607",
+                            "section_type": "sub",
+                            "type": "action",
+                            "parent_elem_id": 1539231064041,
+                            "action_condtion": "yes",
+                            "action": {
+                              "action_type": "Show Form",
+                              "apply_to": "-1",
+                              "field": "FIELD_5",
+                              "action_value": ""
+                            }
+                          }
+                        ],
+                        "if_no": [
+                          {
+                            "description": "",
+                            "section_id": "1539231071406",
+                            "section_type": "sub",
+                            "type": "condition",
+                            "condition": {
+                              "condition": "AND",
+                              "rules": [
+                                {
+                                  "id": "FIELD_4",
+                                  "field": "FIELD_4",
+                                  "type": "string",
+                                  "input": "text",
+                                  "operator": "equal",
+                                  "value": "12"
+                                }
+                              ],
+                              "valid": true
+                            },
+                            "if_yes": [],
+                            "if_no": []
+                          }
+                        ]
+                      }
+                    ],
+                    "if_no": []
+                  },
+                  {
+                    "description": "Rule 2",
+                    "section_id": "1539231085053",
+                    "section_type": "main",
+                    "type": "condition",
+                    "condition": {
+                      "condition": "AND",
+                      "rules": [
+                        {
+                          "id": "FIELD_4",
+                          "field": "FIELD_4",
+                          "type": "string",
+                          "input": "text",
+                          "operator": "equal",
+                          "value": 10
+                        }
+                      ],
+                      "valid": true
+                    },
+                    "if_yes": [],
+                    "if_no": []
+                  }
+                ]
+              }
         }
         createLogicTree(json_object.set, '#container');
     }
@@ -781,6 +939,10 @@ jQuery(document).ready(function () {
         var parent = $('.action-section').parent().parent();
         parent.children('.action-container').find('.action_select').addClass('hidden');
         parent.children('.action-container').find('.add_more_actions_container').removeClass('hidden');
+
+        var no_of_sections = $('#container').children('.sections').length;
+        no_of_sections > 0 && $('#btn-create-rules-main').addClass('hidden')
+        no_of_sections > 0 && $('.btn-clear-sections').removeClass('hidden');
     }
 
     /**
@@ -859,13 +1021,25 @@ jQuery(document).ready(function () {
         $(".btn-danger").contents().filter(function () { return this.nodeType == 3; }).remove();
     });
 
-    $('#btn-create-rules').click(function () {
+    $('#btn-create-rules').click(function (e) {
+        $('#btn-create-rules-main').addClass('hidden')
+        $('.btn-clear-sections').removeClass('hidden');
+        var elem_id = Math.round(new Date().getTime() + (Math.random() * 100));
+        createConditionalSection(elem_id, 'main', '#container', null)
+        queryRulesBuilder(elem_id);
+        $(".btn-danger").contents().filter(function () { return this.nodeType == 3; }).remove();
+        $("#rules-container").animate({ scrollTop: $('#rules-container').prop("scrollHeight") }, 1000);
+    });
+
+    $('#btn-create-rules-main').click(function (e) {
+        e.preventDefault();
+        $(this).addClass('hidden');
+        $('.btn-clear-sections').removeClass('hidden');
         var elem_id = Math.round(new Date().getTime() + (Math.random() * 100));
         createConditionalSection(elem_id, 'main', '#container', null)
         queryRulesBuilder(elem_id);
         $(".btn-danger").contents().filter(function () { return this.nodeType == 3; }).remove();
     });
-
 
     $('body').on("click", '#btn-save-rules', function () {
         var ruleSet = {};
@@ -936,6 +1110,7 @@ jQuery(document).ready(function () {
         var no_of_actions = parent_sub_logic.hasClass('sub-yes') ? $('#sub-yes_' + parent_elem_id).children('.logics').length : $('#sub-no_' + parent_elem_id).children('.logics').length;
         var action_select = parent_sub_logic.hasClass('sub-yes') ? '#action_select_yes_' + parent_elem_id : '#action_select_no_' + parent_elem_id;
         var action_container = parent_sub_logic.hasClass('sub-yes') ? '#add_more_actions_container_yes_' + parent_elem_id : '#add_more_actions_container_no_' + parent_elem_id;
+
         if (no_of_actions == 1 && type == "action") {
             $(action_select).removeClass('hidden');
             $(action_container).addClass('hidden');
@@ -943,6 +1118,10 @@ jQuery(document).ready(function () {
         }
 
         $(this).closest('.logics').remove();
+        var no_of_sections = $('#container').children('.sections').length;
+        no_of_sections == 0 && $('#btn-create-rules-main').removeClass('hidden')
+        no_of_sections == 0 && $('.btn-clear-sections').addClass('hidden');
+
     });
 
     $(document).on('click', '.btn', function (e) {
@@ -954,4 +1133,34 @@ jQuery(document).ready(function () {
         toggle_visibility($(this).data('input-id'))
     });
 
+    $(document).on('click', '.btn-clear-sections', function () {
+        swal({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this rule group!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+            .then((willDelete) => {
+                if (willDelete) {
+                    $('#container').html('');
+                    $('#btn-create-rules-main').removeClass('hidden');
+                    $(this).addClass('hidden');
+                }
+            });
+
+    });
+
+    $('#rules-container').scroll(function () {  // OR  $(window).scroll(function() {
+        if ($(this).scrollTop() > 50) {
+            $('.scrolltop:hidden').stop(true, true).fadeIn();
+        } else {
+            $('.scrolltop').stop(true, true).fadeOut();
+        }
+    });
+
+    $(document).on('click', '.scroll', function () {
+        $("#rules-container").animate({ scrollTop: $("#rules-container").offset().top }, "1000");
+        return false;
+    });
 });

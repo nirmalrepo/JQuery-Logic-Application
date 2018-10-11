@@ -1,0 +1,49 @@
+.rules-list-container, .rules-list-table-container {
+    padding: 15px;
+}
+
+.btn-outline-primary {
+    color: #007bff;
+    background-color: transparent;
+    background-image: none;
+    border-color: #007bff;
+    border-radius: 0px;
+}
+
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Side Bar Styles */
+
+/* .row.content {
+    height: 1500px
+} */
+
+.sidenav {
+    background-color: #f1f1f1;
+    height: 100%;
+}
+
+footer {
+    background-color: #555;
+    color: white;
+    padding: 15px;
+}
+
+@media screen and (max-width: 767px) {
+    .sidenav {
+        height: auto;
+        padding: 15px;
+    }
+    .row.content {
+        height: auto;
+    }
+}
+
+.logo-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
