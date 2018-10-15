@@ -5,6 +5,15 @@ jQuery(document).ready(function () {
     var url = new URL(url_string);
     var id = url.searchParams.get("id");
 
+    panzoom(document.querySelector('#container'), {
+        maxZoom: 1,
+        minZoom: 0.3
+    }).zoomAbs(
+        300, // initial x position
+        500, // initial y position
+        1  // initial zoom 
+    );
+
     if (id != null) {
 
         if (id == '1') {
@@ -267,113 +276,113 @@ jQuery(document).ready(function () {
             json_object = {
                 "name": "Rule_1539231388004",
                 "set": [
-                  {
-                    "description": "Rule 1",
-                    "section_id": "1539231032353",
-                    "section_type": "main",
-                    "type": "condition",
-                    "condition": {
-                      "condition": "AND",
-                      "rules": [
-                        {
-                          "id": "FIELD_4",
-                          "field": "FIELD_4",
-                          "type": "string",
-                          "input": "text",
-                          "operator": "equal",
-                          "value": 10
-                        }
-                      ],
-                      "valid": true
-                    },
-                    "if_yes": [
-                      {
-                        "description": "",
-                        "section_id": "1539231064041",
-                        "section_type": "sub",
+                    {
+                        "description": "Rule 1",
+                        "section_id": "1539231032353",
+                        "section_type": "main",
                         "type": "condition",
                         "condition": {
-                          "condition": "AND",
-                          "rules": [
-                            {
-                              "id": "FIELD_4",
-                              "field": "FIELD_4",
-                              "type": "string",
-                              "input": "text",
-                              "operator": "equal",
-                              "value": "11"
-                            }
-                          ],
-                          "valid": true
+                            "condition": "AND",
+                            "rules": [
+                                {
+                                    "id": "FIELD_4",
+                                    "field": "FIELD_4",
+                                    "type": "string",
+                                    "input": "text",
+                                    "operator": "equal",
+                                    "value": 10
+                                }
+                            ],
+                            "valid": true
                         },
                         "if_yes": [
-                          {
-                            "description": "",
-                            "section_id": "1539231075607",
-                            "section_type": "sub",
-                            "type": "action",
-                            "parent_elem_id": 1539231064041,
-                            "action_condtion": "yes",
-                            "action": {
-                              "action_type": "Show Form",
-                              "apply_to": "-1",
-                              "field": "FIELD_5",
-                              "action_value": ""
+                            {
+                                "description": "",
+                                "section_id": "1539231064041",
+                                "section_type": "sub",
+                                "type": "condition",
+                                "condition": {
+                                    "condition": "AND",
+                                    "rules": [
+                                        {
+                                            "id": "FIELD_4",
+                                            "field": "FIELD_4",
+                                            "type": "string",
+                                            "input": "text",
+                                            "operator": "equal",
+                                            "value": "11"
+                                        }
+                                    ],
+                                    "valid": true
+                                },
+                                "if_yes": [
+                                    {
+                                        "description": "",
+                                        "section_id": "1539231075607",
+                                        "section_type": "sub",
+                                        "type": "action",
+                                        "parent_elem_id": 1539231064041,
+                                        "action_condtion": "yes",
+                                        "action": {
+                                            "action_type": "Show Form",
+                                            "apply_to": "-1",
+                                            "field": "FIELD_5",
+                                            "action_value": ""
+                                        }
+                                    }
+                                ],
+                                "if_no": [
+                                    {
+                                        "description": "",
+                                        "section_id": "1539231071406",
+                                        "section_type": "sub",
+                                        "type": "condition",
+                                        "condition": {
+                                            "condition": "AND",
+                                            "rules": [
+                                                {
+                                                    "id": "FIELD_4",
+                                                    "field": "FIELD_4",
+                                                    "type": "string",
+                                                    "input": "text",
+                                                    "operator": "equal",
+                                                    "value": "12"
+                                                }
+                                            ],
+                                            "valid": true
+                                        },
+                                        "if_yes": [],
+                                        "if_no": []
+                                    }
+                                ]
                             }
-                          }
                         ],
-                        "if_no": [
-                          {
-                            "description": "",
-                            "section_id": "1539231071406",
-                            "section_type": "sub",
-                            "type": "condition",
-                            "condition": {
-                              "condition": "AND",
-                              "rules": [
-                                {
-                                  "id": "FIELD_4",
-                                  "field": "FIELD_4",
-                                  "type": "string",
-                                  "input": "text",
-                                  "operator": "equal",
-                                  "value": "12"
-                                }
-                              ],
-                              "valid": true
-                            },
-                            "if_yes": [],
-                            "if_no": []
-                          }
-                        ]
-                      }
-                    ],
-                    "if_no": []
-                  },
-                  {
-                    "description": "Rule 2",
-                    "section_id": "1539231085053",
-                    "section_type": "main",
-                    "type": "condition",
-                    "condition": {
-                      "condition": "AND",
-                      "rules": [
-                        {
-                          "id": "FIELD_4",
-                          "field": "FIELD_4",
-                          "type": "string",
-                          "input": "text",
-                          "operator": "equal",
-                          "value": 10
-                        }
-                      ],
-                      "valid": true
+                        "if_no": []
                     },
-                    "if_yes": [],
-                    "if_no": []
-                  }
+                    {
+                        "description": "Rule 2",
+                        "section_id": "1539231085053",
+                        "section_type": "main",
+                        "type": "condition",
+                        "condition": {
+                            "condition": "AND",
+                            "rules": [
+                                {
+                                    "id": "FIELD_4",
+                                    "field": "FIELD_4",
+                                    "type": "string",
+                                    "input": "text",
+                                    "operator": "equal",
+                                    "value": 10
+                                }
+                            ],
+                            "valid": true
+                        },
+                        "if_yes": [],
+                        "if_no": []
+                    }
                 ]
-              }
+            }
         }
         createLogicTree(json_object.set, '#container');
     }
@@ -422,7 +431,7 @@ jQuery(document).ready(function () {
         if (section_type != 'main') {
 
         }
-        html += '<a href="#" class="toggle-input" data-input-id="input-description_' + elem_id + '">Enter rule description</a><input class="form-control input-description" id="input-description_' + elem_id + '" type="text" placeholder="Enter description">';
+        html += '<div class="toggle-input-container"><a href="#" class="toggle-input" data-input-id="input-description_' + elem_id + '">Enter rule description</a></div><input class="form-control input-description" id="input-description_' + elem_id + '" type="text" placeholder="Enter description">';
         html += '<div id = "builder_' + elem_id + '" class= "condition builder"';
         html += '></div ><h1 class="dash-down-arrow">&#x21e3</h1>' +
             '<div class="container conditions-section" id="conditions-section_' + elem_id + '">' +
@@ -482,7 +491,7 @@ jQuery(document).ready(function () {
         html += (section_type == 'main') ? 'sections"' : ' sub-sections"';
         html += ' ><a class="close-thik" data-type="action"></a>';
         if (section_type != 'main') {
-            html += '<a href="#" class="toggle-input" data-input-id="input-description_' + elem_id + '">Enter rule description</a><input class="form-control input-description" id="input-description_' + elem_id + '" type="text" placeholder="Enter description">'
+            html += '<div class="toggle-input-container"><a href="#" class="toggle-input" data-input-id="input-description_' + elem_id + '">Enter rule description</a></div><input class="form-control input-description" id="input-description_' + elem_id + '" type="text" placeholder="Enter description">'
         }
         html += ' <div id = "builder_' + elem_id + '" class= "builder actions form-inline query-builder"';
         html += ' ><div class="rules-group-container"> </div></div></div>';
@@ -859,7 +868,7 @@ jQuery(document).ready(function () {
         // if (item.section_type != 'main') {
         //     html += '<input class="form-control" id="input-description_' + item.section_id + '" type="text" placeholder="Enter description">'
         // }
-        html += '<a href="#" class="toggle-input" data-input-id="input-description_' + item.section_id + '">Enter rule description</a><input class="form-control input-description" id="input-description_' + item.section_id + '" type="text" placeholder="Enter description">'
+        html += '<div class="toggle-input-container"><a href="#" class="toggle-input" data-input-id="input-description_' + item.section_id + '">Enter rule description</a></div><input class="form-control input-description" id="input-description_' + item.section_id + '" type="text" placeholder="Enter description">'
         html += ' <div id = "builder_' + item.section_id + '" class= "condition builder"';
         html += '></div ><h1 class="dash-down-arrow">&#x21e3</h1>' +
             '<div class="container conditions-section" id="conditions-section_' + item.section_id + '">' +
@@ -931,6 +940,7 @@ jQuery(document).ready(function () {
     }
 
 
+
     /**
      * Show or hide action section buttons
      *
@@ -942,7 +952,7 @@ jQuery(document).ready(function () {
 
         var no_of_sections = $('#container').children('.sections').length;
         no_of_sections > 0 && $('#btn-create-rules-main').addClass('hidden')
-        no_of_sections > 0 && $('.btn-clear-sections').removeClass('hidden');
+        no_of_sections > 0 && $('.btn-clear-sections, .btn-save-rules').removeClass('hidden');
     }
 
     /**
@@ -1023,7 +1033,7 @@ jQuery(document).ready(function () {
 
     $('#btn-create-rules').click(function (e) {
         $('#btn-create-rules-main').addClass('hidden')
-        $('.btn-clear-sections').removeClass('hidden');
+        $('.btn-clear-sections, .btn-save-rules').removeClass('hidden');
         var elem_id = Math.round(new Date().getTime() + (Math.random() * 100));
         createConditionalSection(elem_id, 'main', '#container', null)
         queryRulesBuilder(elem_id);
@@ -1034,7 +1044,7 @@ jQuery(document).ready(function () {
     $('#btn-create-rules-main').click(function (e) {
         e.preventDefault();
         $(this).addClass('hidden');
-        $('.btn-clear-sections').removeClass('hidden');
+        $('.btn-clear-sections, .btn-save-rules').removeClass('hidden');
         var elem_id = Math.round(new Date().getTime() + (Math.random() * 100));
         createConditionalSection(elem_id, 'main', '#container', null)
         queryRulesBuilder(elem_id);
@@ -1120,7 +1130,7 @@ jQuery(document).ready(function () {
         $(this).closest('.logics').remove();
         var no_of_sections = $('#container').children('.sections').length;
         no_of_sections == 0 && $('#btn-create-rules-main').removeClass('hidden')
-        no_of_sections == 0 && $('.btn-clear-sections').addClass('hidden');
+        no_of_sections == 0 && $('.btn-clear-sections, .btn-save-rules').addClass('hidden');
 
     });
 
@@ -1146,6 +1156,15 @@ jQuery(document).ready(function () {
                     $('#container').html('');
                     $('#btn-create-rules-main').removeClass('hidden');
                     $(this).addClass('hidden');
+                    $('.btn-save-rules').addClass('hidden');
+                    panzoom(document.querySelector('#container'), {
+                        maxZoom: 1,
+                        minZoom: 0.3
+                    }).zoomAbs(
+                        300, // initial x position
+                        500, // initial y position
+                        1  // initial zoom 
+                    );
                 }
             });
 
@@ -1163,4 +1182,6 @@ jQuery(document).ready(function () {
         $("#rules-container").animate({ scrollTop: $("#rules-container").offset().top }, "1000");
         return false;
     });
+
+
 });

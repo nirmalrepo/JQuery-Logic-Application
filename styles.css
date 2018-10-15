@@ -127,7 +127,7 @@ i.glyphicon-remove {
     border-color: #28a745;
 }
 
-.btn-outline-primary {
+.btn-outline-primary, .btn-save-rules {
     color: #007bff;
     background-color: transparent;
     background-image: none;
@@ -135,7 +135,7 @@ i.glyphicon-remove {
     border-radius: 0px;
 }
 
-.btn-outline-primary:hover {
+.btn-outline-primary:hover, .btn-save-rules:hover {
     color: #fff;
     background-color: #007bff;
     border-color: #007bff;
@@ -162,12 +162,16 @@ i.glyphicon-remove {
     background: transparent;
     color: grey;
     border: 1px solid #888888;
-    padding: 1px;
     border-radius: 0px;
-    padding: 5px;
     position: absolute;
     top: 15px;
     right: 15px;
+}
+
+.btn-save-rules {
+    position: absolute;
+    top: 15px;
+    right: 120px;
 }
 
 .conditions-section>.row-fluid {
@@ -192,6 +196,11 @@ i.glyphicon-remove {
 }
 
 .sections>.condition {
+    margin: 0 auto;
+}
+
+.condition, .toggle-input-container {
+    width: 60%;
     margin: 0 auto;
 }
 
@@ -228,6 +237,8 @@ i.glyphicon-remove {
     color: #ac2925;
 }
 
+/* Add more sections styles */
+
 .add-more-section h1 {
     margin-top: 0px;
 }
@@ -240,7 +251,8 @@ i.glyphicon-remove {
 }
 
 .add-more-section:hover .btn-add-more-section {
-    display: block;
+    /* display: block; */
+    display: none;
     opacity: 1;
 }
 
@@ -306,6 +318,8 @@ i.glyphicon-remove {
 
 .input-description {
     display: none;
+    margin: 0 auto;
+    width: 60%;
 }
 
 .btn-create-rule-main {
@@ -356,45 +370,63 @@ footer {
 }
 
 /* Scroll to top button style */
+
 .scrolltop {
-	display:none;
-	width:100%;
-	margin:0 auto;
-	position:fixed;
-	bottom:20px;
-	right:10px;	
+    display: none;
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
 }
+
 .scroll {
-	position:absolute;
-	right:20px;
-	bottom:20px;
-	background:#b2b2b2;
-	background:rgba(178,178,178,0.7);
-	padding:20px;
-	text-align: center;
-	margin: 0 0 0 0;
-	cursor:pointer;
-	transition: 0.5s;
-	-moz-transition: 0.5s;
-	-webkit-transition: 0.5s;
-	-o-transition: 0.5s; 		
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background: #b2b2b2;
+    background: rgba(178, 178, 178, 0.7);
+    padding: 20px;
+    text-align: center;
+    margin: 0 0 0 0;
+    cursor: pointer;
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
 }
+
 .scroll:hover {
-	background:rgba(178,178,178,1.0);
-	transition: 0.5s;
-	-moz-transition: 0.5s;
-	-webkit-transition: 0.5s;
-	-o-transition: 0.5s; 		
+    background: rgba(178, 178, 178, 1.0);
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
 }
+
 .scroll:hover .fa {
-	padding-top:-10px;
+    padding-top: -10px;
 }
+
 .scroll .fa {
-	font-size:30px;
-	margin-top:-5px;
-	margin-left:1px;
-	transition: 0.5s;
-	-moz-transition: 0.5s;
-	-webkit-transition: 0.5s;
-	-o-transition: 0.5s; 	
+    font-size: 30px;
+    margin-top: -5px;
+    margin-left: 1px;
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+#nav {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -50px;
+}
+
+#nav input {
+    padding: 5px;
+    font-size: 15px;
+    cursor: pointer;
 }
