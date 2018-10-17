@@ -470,11 +470,17 @@ jQuery(document).ready(function () {
 
 
         (type == 'more') ? $(html).insertBefore(selector) : $(selector).append(html);
+
         if ((section_type == 'main')) {
             $('#yes-block_' + elem_id).css('width', '750px');
             $('#no-block_' + elem_id).css('width', '750px');
 
+        } else {
+            $('#builder_' + elem_id).css('width', '90%');
+            $('#section_' + elem_id + ' .input-description').css('width', '90%');
+            $('#section_' + elem_id + ' .toggle-input-container').css('width', '90%')
         }
+
 
     }
 
