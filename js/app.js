@@ -5,14 +5,7 @@ jQuery(document).ready(function () {
     var url = new URL(url_string);
     var id = url.searchParams.get("id");
 
-    panzoom(document.querySelector('#container'), {
-        maxZoom: 1,
-        minZoom: 0.3
-    }).zoomAbs(
-        300, // initial x position
-        500, // initial y position
-        1  // initial zoom 
-    );
+    panzoomLoad();
 
     if (id != null) {
 
@@ -274,11 +267,11 @@ jQuery(document).ready(function () {
             }
         } else {
             json_object = {
-                "name": "Rule_1539231388004",
+                "name": "Rule_1539823642889",
                 "set": [
                     {
-                        "description": "Rule 1",
-                        "section_id": "1539231032353",
+                        "description": "",
+                        "section_id": "1539823533215",
                         "section_type": "main",
                         "type": "condition",
                         "condition": {
@@ -298,7 +291,7 @@ jQuery(document).ready(function () {
                         "if_yes": [
                             {
                                 "description": "",
-                                "section_id": "1539231064041",
+                                "section_id": "1539823535176",
                                 "section_type": "sub",
                                 "type": "condition",
                                 "condition": {
@@ -310,7 +303,7 @@ jQuery(document).ready(function () {
                                             "type": "string",
                                             "input": "text",
                                             "operator": "equal",
-                                            "value": "11"
+                                            "value": 10
                                         }
                                     ],
                                     "valid": true
@@ -318,23 +311,7 @@ jQuery(document).ready(function () {
                                 "if_yes": [
                                     {
                                         "description": "",
-                                        "section_id": "1539231075607",
-                                        "section_type": "sub",
-                                        "type": "action",
-                                        "parent_elem_id": 1539231064041,
-                                        "action_condtion": "yes",
-                                        "action": {
-                                            "action_type": "Show Form",
-                                            "apply_to": "-1",
-                                            "field": "FIELD_5",
-                                            "action_value": ""
-                                        }
-                                    }
-                                ],
-                                "if_no": [
-                                    {
-                                        "description": "",
-                                        "section_id": "1539231071406",
+                                        "section_id": "1539823546701",
                                         "section_type": "sub",
                                         "type": "condition",
                                         "condition": {
@@ -346,45 +323,689 @@ jQuery(document).ready(function () {
                                                     "type": "string",
                                                     "input": "text",
                                                     "operator": "equal",
-                                                    "value": "12"
+                                                    "value": 10
                                                 }
                                             ],
                                             "valid": true
                                         },
-                                        "if_yes": [],
-                                        "if_no": []
+                                        "if_yes": [
+                                            {
+                                                "description": "",
+                                                "section_id": "1539823567995",
+                                                "section_type": "sub",
+                                                "type": "condition",
+                                                "condition": {
+                                                    "condition": "AND",
+                                                    "rules": [
+                                                        {
+                                                            "id": "FIELD_4",
+                                                            "field": "FIELD_4",
+                                                            "type": "string",
+                                                            "input": "text",
+                                                            "operator": "equal",
+                                                            "value": 10
+                                                        }
+                                                    ],
+                                                    "valid": true
+                                                },
+                                                "if_yes": [
+                                                    {
+                                                        "description": "",
+                                                        "section_id": "1539823574205",
+                                                        "section_type": "sub",
+                                                        "type": "condition",
+                                                        "condition": {
+                                                            "condition": "AND",
+                                                            "rules": [
+                                                                {
+                                                                    "id": "FIELD_4",
+                                                                    "field": "FIELD_4",
+                                                                    "type": "string",
+                                                                    "input": "text",
+                                                                    "operator": "equal",
+                                                                    "value": 10
+                                                                }
+                                                            ],
+                                                            "valid": true
+                                                        },
+                                                        "if_yes": [],
+                                                        "if_no": []
+                                                    }
+                                                ],
+                                                "if_no": [
+                                                    {
+                                                        "description": "",
+                                                        "section_id": "1539823572962",
+                                                        "section_type": "sub",
+                                                        "type": "condition",
+                                                        "condition": {
+                                                            "condition": "AND",
+                                                            "rules": [
+                                                                {
+                                                                    "id": "FIELD_4",
+                                                                    "field": "FIELD_4",
+                                                                    "type": "string",
+                                                                    "input": "text",
+                                                                    "operator": "equal",
+                                                                    "value": 10
+                                                                }
+                                                            ],
+                                                            "valid": true
+                                                        },
+                                                        "if_yes": [],
+                                                        "if_no": []
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "if_no": [
+                                            {
+                                                "description": "",
+                                                "section_id": "1539823566870",
+                                                "section_type": "sub",
+                                                "type": "condition",
+                                                "condition": {
+                                                    "condition": "AND",
+                                                    "rules": [
+                                                        {
+                                                            "id": "FIELD_4",
+                                                            "field": "FIELD_4",
+                                                            "type": "string",
+                                                            "input": "text",
+                                                            "operator": "equal",
+                                                            "value": 10
+                                                        }
+                                                    ],
+                                                    "valid": true
+                                                },
+                                                "if_yes": [
+                                                    {
+                                                        "description": "",
+                                                        "section_id": "1539823577902",
+                                                        "section_type": "sub",
+                                                        "type": "condition",
+                                                        "condition": {
+                                                            "condition": "AND",
+                                                            "rules": [
+                                                                {
+                                                                    "id": "FIELD_4",
+                                                                    "field": "FIELD_4",
+                                                                    "type": "string",
+                                                                    "input": "text",
+                                                                    "operator": "equal",
+                                                                    "value": 10
+                                                                }
+                                                            ],
+                                                            "valid": true
+                                                        },
+                                                        "if_yes": [],
+                                                        "if_no": []
+                                                    }
+                                                ],
+                                                "if_no": [
+                                                    {
+                                                        "description": "",
+                                                        "section_id": "1539823578943",
+                                                        "section_type": "sub",
+                                                        "type": "condition",
+                                                        "condition": {
+                                                            "condition": "AND",
+                                                            "rules": [
+                                                                {
+                                                                    "id": "FIELD_4",
+                                                                    "field": "FIELD_4",
+                                                                    "type": "string",
+                                                                    "input": "text",
+                                                                    "operator": "equal",
+                                                                    "value": 10
+                                                                }
+                                                            ],
+                                                            "valid": true
+                                                        },
+                                                        "if_yes": [],
+                                                        "if_no": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "if_no": [
+                                    {
+                                        "description": "",
+                                        "section_id": "1539823545901",
+                                        "section_type": "sub",
+                                        "type": "condition",
+                                        "condition": {
+                                            "condition": "AND",
+                                            "rules": [
+                                                {
+                                                    "id": "FIELD_4",
+                                                    "field": "FIELD_4",
+                                                    "type": "string",
+                                                    "input": "text",
+                                                    "operator": "equal",
+                                                    "value": 10
+                                                }
+                                            ],
+                                            "valid": true
+                                        },
+                                        "if_yes": [
+                                            {
+                                                "description": "",
+                                                "section_id": "1539823565999",
+                                                "section_type": "sub",
+                                                "type": "condition",
+                                                "condition": {
+                                                    "condition": "AND",
+                                                    "rules": [
+                                                        {
+                                                            "id": "FIELD_4",
+                                                            "field": "FIELD_4",
+                                                            "type": "string",
+                                                            "input": "text",
+                                                            "operator": "equal",
+                                                            "value": 10
+                                                        }
+                                                    ],
+                                                    "valid": true
+                                                },
+                                                "if_yes": [
+                                                    {
+                                                        "description": "",
+                                                        "section_id": "1539823582793",
+                                                        "section_type": "sub",
+                                                        "type": "condition",
+                                                        "condition": {
+                                                            "condition": "AND",
+                                                            "rules": [
+                                                                {
+                                                                    "id": "FIELD_4",
+                                                                    "field": "FIELD_4",
+                                                                    "type": "string",
+                                                                    "input": "text",
+                                                                    "operator": "equal",
+                                                                    "value": 10
+                                                                }
+                                                            ],
+                                                            "valid": true
+                                                        },
+                                                        "if_yes": [],
+                                                        "if_no": []
+                                                    }
+                                                ],
+                                                "if_no": [
+                                                    {
+                                                        "description": "",
+                                                        "section_id": "1539823585637",
+                                                        "section_type": "sub",
+                                                        "type": "condition",
+                                                        "condition": {
+                                                            "condition": "AND",
+                                                            "rules": [
+                                                                {
+                                                                    "id": "FIELD_4",
+                                                                    "field": "FIELD_4",
+                                                                    "type": "string",
+                                                                    "input": "text",
+                                                                    "operator": "equal",
+                                                                    "value": 10
+                                                                }
+                                                            ],
+                                                            "valid": true
+                                                        },
+                                                        "if_yes": [],
+                                                        "if_no": []
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "if_no": [
+                                            {
+                                                "description": "",
+                                                "section_id": "1539823562701",
+                                                "section_type": "sub",
+                                                "type": "condition",
+                                                "condition": {
+                                                    "condition": "AND",
+                                                    "rules": [
+                                                        {
+                                                            "id": "FIELD_4",
+                                                            "field": "FIELD_4",
+                                                            "type": "string",
+                                                            "input": "text",
+                                                            "operator": "equal",
+                                                            "value": 10
+                                                        }
+                                                    ],
+                                                    "valid": true
+                                                },
+                                                "if_yes": [
+                                                    {
+                                                        "description": "",
+                                                        "section_id": "1539823588808",
+                                                        "section_type": "sub",
+                                                        "type": "condition",
+                                                        "condition": {
+                                                            "condition": "AND",
+                                                            "rules": [
+                                                                {
+                                                                    "id": "FIELD_4",
+                                                                    "field": "FIELD_4",
+                                                                    "type": "string",
+                                                                    "input": "text",
+                                                                    "operator": "equal",
+                                                                    "value": 10
+                                                                }
+                                                            ],
+                                                            "valid": true
+                                                        },
+                                                        "if_yes": [],
+                                                        "if_no": []
+                                                    }
+                                                ],
+                                                "if_no": [
+                                                    {
+                                                        "description": "",
+                                                        "section_id": "1539823591764",
+                                                        "section_type": "sub",
+                                                        "type": "condition",
+                                                        "condition": {
+                                                            "condition": "AND",
+                                                            "rules": [
+                                                                {
+                                                                    "id": "FIELD_4",
+                                                                    "field": "FIELD_4",
+                                                                    "type": "string",
+                                                                    "input": "text",
+                                                                    "operator": "equal",
+                                                                    "value": 10
+                                                                }
+                                                            ],
+                                                            "valid": true
+                                                        },
+                                                        "if_yes": [],
+                                                        "if_no": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             }
                         ],
-                        "if_no": []
-                    },
-                    {
-                        "description": "Rule 2",
-                        "section_id": "1539231085053",
-                        "section_type": "main",
-                        "type": "condition",
-                        "condition": {
-                            "condition": "AND",
-                            "rules": [
-                                {
-                                    "id": "FIELD_4",
-                                    "field": "FIELD_4",
-                                    "type": "string",
-                                    "input": "text",
-                                    "operator": "equal",
-                                    "value": 10
-                                }
-                            ],
-                            "valid": true
-                        },
-                        "if_yes": [],
-                        "if_no": []
+                        "if_no": [
+                            {
+                                "description": "",
+                                "section_id": "1539823536670",
+                                "section_type": "sub",
+                                "type": "condition",
+                                "condition": {
+                                    "condition": "AND",
+                                    "rules": [
+                                        {
+                                            "id": "FIELD_4",
+                                            "field": "FIELD_4",
+                                            "type": "string",
+                                            "input": "text",
+                                            "operator": "equal",
+                                            "value": 10
+                                        }
+                                    ],
+                                    "valid": true
+                                },
+                                "if_yes": [
+                                    {
+                                        "description": "",
+                                        "section_id": "1539823553593",
+                                        "section_type": "sub",
+                                        "type": "condition",
+                                        "condition": {
+                                            "condition": "AND",
+                                            "rules": [
+                                                {
+                                                    "id": "FIELD_4",
+                                                    "field": "FIELD_4",
+                                                    "type": "string",
+                                                    "input": "text",
+                                                    "operator": "equal",
+                                                    "value": 10
+                                                }
+                                            ],
+                                            "valid": true
+                                        },
+                                        "if_yes": [
+                                            {
+                                                "description": "",
+                                                "section_id": "1539823561783",
+                                                "section_type": "sub",
+                                                "type": "condition",
+                                                "condition": {
+                                                    "condition": "AND",
+                                                    "rules": [
+                                                        {
+                                                            "id": "FIELD_4",
+                                                            "field": "FIELD_4",
+                                                            "type": "string",
+                                                            "input": "text",
+                                                            "operator": "equal",
+                                                            "value": 10
+                                                        }
+                                                    ],
+                                                    "valid": true
+                                                },
+                                                "if_yes": [
+                                                    {
+                                                        "description": "",
+                                                        "section_id": "1539823594418",
+                                                        "section_type": "sub",
+                                                        "type": "condition",
+                                                        "condition": {
+                                                            "condition": "AND",
+                                                            "rules": [
+                                                                {
+                                                                    "id": "FIELD_4",
+                                                                    "field": "FIELD_4",
+                                                                    "type": "string",
+                                                                    "input": "text",
+                                                                    "operator": "equal",
+                                                                    "value": 10
+                                                                }
+                                                            ],
+                                                            "valid": true
+                                                        },
+                                                        "if_yes": [],
+                                                        "if_no": []
+                                                    }
+                                                ],
+                                                "if_no": [
+                                                    {
+                                                        "description": "",
+                                                        "section_id": "1539823596158",
+                                                        "section_type": "sub",
+                                                        "type": "condition",
+                                                        "condition": {
+                                                            "condition": "AND",
+                                                            "rules": [
+                                                                {
+                                                                    "id": "FIELD_4",
+                                                                    "field": "FIELD_4",
+                                                                    "type": "string",
+                                                                    "input": "text",
+                                                                    "operator": "equal",
+                                                                    "value": 10
+                                                                }
+                                                            ],
+                                                            "valid": true
+                                                        },
+                                                        "if_yes": [],
+                                                        "if_no": []
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "if_no": [
+                                            {
+                                                "description": "",
+                                                "section_id": "1539823560927",
+                                                "section_type": "sub",
+                                                "type": "condition",
+                                                "condition": {
+                                                    "condition": "AND",
+                                                    "rules": [
+                                                        {
+                                                            "id": "FIELD_4",
+                                                            "field": "FIELD_4",
+                                                            "type": "string",
+                                                            "input": "text",
+                                                            "operator": "equal",
+                                                            "value": 10
+                                                        }
+                                                    ],
+                                                    "valid": true
+                                                },
+                                                "if_yes": [
+                                                    {
+                                                        "description": "",
+                                                        "section_id": "1539823599307",
+                                                        "section_type": "sub",
+                                                        "type": "condition",
+                                                        "condition": {
+                                                            "condition": "AND",
+                                                            "rules": [
+                                                                {
+                                                                    "id": "FIELD_4",
+                                                                    "field": "FIELD_4",
+                                                                    "type": "string",
+                                                                    "input": "text",
+                                                                    "operator": "equal",
+                                                                    "value": 10
+                                                                }
+                                                            ],
+                                                            "valid": true
+                                                        },
+                                                        "if_yes": [],
+                                                        "if_no": []
+                                                    }
+                                                ],
+                                                "if_no": [
+                                                    {
+                                                        "description": "",
+                                                        "section_id": "1539823600510",
+                                                        "section_type": "sub",
+                                                        "type": "condition",
+                                                        "condition": {
+                                                            "condition": "AND",
+                                                            "rules": [
+                                                                {
+                                                                    "id": "FIELD_4",
+                                                                    "field": "FIELD_4",
+                                                                    "type": "string",
+                                                                    "input": "text",
+                                                                    "operator": "equal",
+                                                                    "value": 10
+                                                                }
+                                                            ],
+                                                            "valid": true
+                                                        },
+                                                        "if_yes": [],
+                                                        "if_no": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "if_no": [
+                                    {
+                                        "description": "",
+                                        "section_id": "1539823557347",
+                                        "section_type": "sub",
+                                        "type": "condition",
+                                        "condition": {
+                                            "condition": "AND",
+                                            "rules": [
+                                                {
+                                                    "id": "FIELD_4",
+                                                    "field": "FIELD_4",
+                                                    "type": "string",
+                                                    "input": "text",
+                                                    "operator": "equal",
+                                                    "value": 10
+                                                }
+                                            ],
+                                            "valid": true
+                                        },
+                                        "if_yes": [
+                                            {
+                                                "description": "",
+                                                "section_id": "1539823559994",
+                                                "section_type": "sub",
+                                                "type": "condition",
+                                                "condition": {
+                                                    "condition": "AND",
+                                                    "rules": [
+                                                        {
+                                                            "id": "FIELD_4",
+                                                            "field": "FIELD_4",
+                                                            "type": "string",
+                                                            "input": "text",
+                                                            "operator": "equal",
+                                                            "value": 10
+                                                        }
+                                                    ],
+                                                    "valid": true
+                                                },
+                                                "if_yes": [
+                                                    {
+                                                        "description": "",
+                                                        "section_id": "1539823606115",
+                                                        "section_type": "sub",
+                                                        "type": "condition",
+                                                        "condition": {
+                                                            "condition": "AND",
+                                                            "rules": [
+                                                                {
+                                                                    "id": "FIELD_4",
+                                                                    "field": "FIELD_4",
+                                                                    "type": "string",
+                                                                    "input": "text",
+                                                                    "operator": "equal",
+                                                                    "value": 10
+                                                                }
+                                                            ],
+                                                            "valid": true
+                                                        },
+                                                        "if_yes": [],
+                                                        "if_no": []
+                                                    }
+                                                ],
+                                                "if_no": [
+                                                    {
+                                                        "description": "",
+                                                        "section_id": "1539823604713",
+                                                        "section_type": "sub",
+                                                        "type": "condition",
+                                                        "condition": {
+                                                            "condition": "AND",
+                                                            "rules": [
+                                                                {
+                                                                    "id": "FIELD_4",
+                                                                    "field": "FIELD_4",
+                                                                    "type": "string",
+                                                                    "input": "text",
+                                                                    "operator": "equal",
+                                                                    "value": 10
+                                                                }
+                                                            ],
+                                                            "valid": true
+                                                        },
+                                                        "if_yes": [],
+                                                        "if_no": []
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "if_no": [
+                                            {
+                                                "description": "",
+                                                "section_id": "1539823558935",
+                                                "section_type": "sub",
+                                                "type": "condition",
+                                                "condition": {
+                                                    "condition": "AND",
+                                                    "rules": [
+                                                        {
+                                                            "id": "FIELD_4",
+                                                            "field": "FIELD_4",
+                                                            "type": "string",
+                                                            "input": "text",
+                                                            "operator": "equal",
+                                                            "value": 10
+                                                        }
+                                                    ],
+                                                    "valid": true
+                                                },
+                                                "if_yes": [
+                                                    {
+                                                        "description": "",
+                                                        "section_id": "1539823610024",
+                                                        "section_type": "sub",
+                                                        "type": "condition",
+                                                        "condition": {
+                                                            "condition": "AND",
+                                                            "rules": [
+                                                                {
+                                                                    "id": "FIELD_4",
+                                                                    "field": "FIELD_4",
+                                                                    "type": "string",
+                                                                    "input": "text",
+                                                                    "operator": "equal",
+                                                                    "value": 10
+                                                                }
+                                                            ],
+                                                            "valid": true
+                                                        },
+                                                        "if_yes": [],
+                                                        "if_no": []
+                                                    }
+                                                ],
+                                                "if_no": [
+                                                    {
+                                                        "description": "",
+                                                        "section_id": "1539823611268",
+                                                        "section_type": "sub",
+                                                        "type": "condition",
+                                                        "condition": {
+                                                            "condition": "AND",
+                                                            "rules": [
+                                                                {
+                                                                    "id": "FIELD_4",
+                                                                    "field": "FIELD_4",
+                                                                    "type": "string",
+                                                                    "input": "text",
+                                                                    "operator": "equal",
+                                                                    "value": 10
+                                                                }
+                                                            ],
+                                                            "valid": true
+                                                        },
+                                                        "if_yes": [
+                                                            {
+                                                                "description": "",
+                                                                "section_id": "1539823617623",
+                                                                "section_type": "sub",
+                                                                "type": "action",
+                                                                "parent_elem_id": 1539823611268,
+                                                                "action_condtion": "yes",
+                                                                "action": {
+                                                                    "action_type": "-1",
+                                                                    "apply_to": "-1",
+                                                                    "field": "-1",
+                                                                    "action_value": ""
+                                                                }
+                                                            }
+                                                        ],
+                                                        "if_no": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             }
+
+
+
         }
-        createLogicTree(json_object.set, '#container');
+        showLoadeAndCreateLogicTree(function () {
+            createLogicTree(json_object.set, '#container');
+        })
+
     }
 
     var rules_basic = {
@@ -871,9 +1492,6 @@ jQuery(document).ready(function () {
         var html = '<div id="section_' + item.section_id + '" class="condition-section logics ';
         html += (item.section_type == 'main') ? 'sections"' : ' sub-sections"';
         html += ' ><a class="close-thik" data-type="condition"></a><div class="add-more-section" data-id="' + item.section_id + '"><button type="button" data-type="' + item.section_type + '" data-id="' + item.section_id + '" id="btn-add-more-section_' + item.section_id + '" class="btn btn-default btn-add-more-section"><span class="glyphicon glyphicon-plus-sign"></span></button><h1 class="down-arrow">&#x2193</h1></div>';
-        // if (item.section_type != 'main') {
-        //     html += '<input class="form-control" id="input-description_' + item.section_id + '" type="text" placeholder="Enter description">'
-        // }
         html += '<div class="toggle-input-container"><a href="#" class="toggle-input" data-input-id="input-description_' + item.section_id + '">Enter rule description</a></div><input class="form-control input-description" id="input-description_' + item.section_id + '" type="text" placeholder="Enter description">'
         html += ' <div id = "builder_' + item.section_id + '" class= "condition builder"';
         html += '></div ><h1 class="dash-down-arrow">&#x21e3</h1>' +
@@ -976,20 +1594,46 @@ jQuery(document).ready(function () {
         showHideActionOrConditionButtons();
     }
 
+
+    function showLoadeAndCreateLogicTree(callBack) {
+        $('#btn-create-rules-main').addClass('hidden');
+        $('#page-loader').removeClass('hidden');
+        if (typeof callBack == 'function') {
+            setTimeout(function () {
+                callBack();
+                $('#page-loader').addClass('hidden');
+            }, 1500);;
+        }
+    }
+
+
+    /**
+     * Default container zoom with position
+     *
+     */
+    function panzoomLoad() {
+        panzoom(document.querySelector('#container'), {
+            maxZoom: 1,
+            minZoom: 0.3
+        }).zoomAbs(
+            300, // initial x position
+            500, // initial y position
+            1  // initial zoom 
+        );
+    }
+
+
+    function checkConditionSectionExists(elem_id, condition_type) {
+        var parent_elem = $('#sub-' + condition_type + '_' + elem_id);
+
+        children_length = parent_elem.children('.logics').length;
+        return children_length > 0 ? true : false;
+    }
+
     /****************************************************************
                             Triggers and Changers
     *****************************************************************/
 
-    $('#btn-get').on('click', function () {
-        var result = $('#builder').queryBuilder('getRules');
-        if (!$.isEmptyObject(result)) {
-            alert(JSON.stringify(result, null, 2));
-        }
-        else {
-            console.log("invalid object :");
-        }
-        console.log(result);
-    });
 
     $('#btn-reset').on('click', function () {
         $('#builder').queryBuilder('reset');
@@ -1009,11 +1653,17 @@ jQuery(document).ready(function () {
     $(document).on('click', '.btn-sub-condtion', function () {
         var parent_elem_id = $(this).data('elem-id');
         var is_condition = $(this).data('condition');
+
+
+
         var elem_id = Math.round(new Date().getTime() + (Math.random() * 100));
         var select_yes_no = $(this).data('value');
         var action_type = (select_yes_no == 'condition') ? 'condition' : (select_yes_no == 'action') ? 'action' : '';
         var wrapper = (is_condition === 'yes') ? '#sub-yes_' + parent_elem_id : '#sub-no_' + parent_elem_id;
 
+        if (action_type == 'condition' && checkConditionSectionExists(parent_elem_id, is_condition)) {
+            return;
+        };
 
         if ($('#section_' + parent_elem_id).hasClass('sections')) {
             if (is_condition === 'yes') {
@@ -1076,7 +1726,7 @@ jQuery(document).ready(function () {
     $(document).on('click', '.btn-clear-action', function () {
         swal({
             title: "Are you sure?",
-            text: "Once deleted, you will not be able to recover this imaginary file!",
+            text: "Once deleted, you will not be able to recover this rules set!",
             icon: "warning",
             buttons: true,
             dangerMode: true,
@@ -1095,6 +1745,7 @@ jQuery(document).ready(function () {
                     $(wrapper).html('');
                     $(action_select).removeClass('hidden');
                     $(this).closest('.add_more_actions_container').addClass('hidden');
+                    panzoomLoad();
                 }
             });
 
@@ -1163,20 +1814,18 @@ jQuery(document).ready(function () {
                     $('#btn-create-rules-main').removeClass('hidden');
                     $(this).addClass('hidden');
                     $('.btn-save-rules').addClass('hidden');
-                    panzoom(document.querySelector('#container'), {
-                        maxZoom: 1,
-                        minZoom: 0.3
-                    }).zoomAbs(
-                        300, // initial x position
-                        500, // initial y position
-                        1  // initial zoom 
-                    );
+                    panzoomLoad();
                 }
             });
 
     });
 
-    $('#rules-container').scroll(function () {  // OR  $(window).scroll(function() {
+    $(document).on('click', '.scroll', function () {
+        $("#rules-container").animate({ scrollTop: $("#rules-container").offset().top }, "1000");
+        return false;
+    });
+
+    $('#rules-container').scroll(function () {
         if ($(this).scrollTop() > 50) {
             $('.scrolltop:hidden').stop(true, true).fadeIn();
         } else {
@@ -1184,10 +1833,7 @@ jQuery(document).ready(function () {
         }
     });
 
-    $(document).on('click', '.scroll', function () {
-        $("#rules-container").animate({ scrollTop: $("#rules-container").offset().top }, "1000");
-        return false;
-    });
+
 
 
 });

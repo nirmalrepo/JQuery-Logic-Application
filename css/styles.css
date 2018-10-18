@@ -158,20 +158,26 @@ i.glyphicon-remove {
     margin-left: 2%;
 }
 
+.page-loader {
+    margin: 0 auto;
+}
+
 .btn-clear-sections {
     background: transparent;
     color: grey;
     border: 1px solid #888888;
     border-radius: 0px;
-    position: absolute;
+    position: fixed;
     top: 15px;
-    right: 15px;
+    right: 25;
+    z-index: 9999;
 }
 
 .btn-save-rules {
-    position: absolute;
+    position: fixed;
     top: 15px;
-    right: 120px;
+    right: 140;
+    z-index: 9999;
 }
 
 .conditions-section>.row-fluid {
@@ -202,6 +208,16 @@ i.glyphicon-remove {
 .condition, .toggle-input-container {
     width: 60%;
     margin: 0 auto;
+}
+
+.action-section .toggle-input-container {
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.action-section .input-description {
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 .sub-sections .rule-value-container {
