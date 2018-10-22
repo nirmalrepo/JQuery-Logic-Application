@@ -8,7 +8,6 @@ jQuery(document).ready(function () {
     panzoomLoad();
 
     if (id != null) {
-
         if (id == '1') {
             var json_object = {
                 "name": "Rule_1539225176436",

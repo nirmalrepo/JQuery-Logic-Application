@@ -267,7 +267,7 @@ i.glyphicon-remove {
 }
 
 .add-more-section:hover .btn-add-more-section {
-    /* display: block; */
+    /* display: block;  - To enable add more sections, uncomment this line and comment below display: none */
     display: none;
     opacity: 1;
 }
@@ -353,11 +353,12 @@ i.glyphicon-remove {
     color: #23527c;
 }
 
+[data-add="group"] {
+    display: none;
+}
+
 /* Side Bar Styles */
 
-/* .row.content {
-    height: 1500px
-} */
 
 .sidenav {
     background-color: #f1f1f1;
