@@ -8,8 +8,6 @@ This project is a result of NMIT workplacement with Zumesoft Solutions Pty.Ltd
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
  
 ## Tech/framework used
-Ex. -
-
 <b>Built with</b>
 - [JQuery](https://jquery.com/)
 - [Bootstrap](https://getbootstrap.com/)
